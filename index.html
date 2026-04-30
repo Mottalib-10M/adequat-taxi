@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Adéquat Taxi – Taxi Clermont-Ferrand & Puy-de-Dôme | 24h/24</title>
+<meta name="description" content="Adéquat Taxi : taxi professionnel à Clermont-Ferrand, transport médical CPAM, transferts aéroport & gare. Disponible 24h/24."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#0a0a0a;--white:#ffffff;--off-white:#fafafa;
+  --gold:#c9a84c;--gold-light:rgba(201,168,76,.08);--gold-border:rgba(201,168,76,.2);
+  --gray-50:#f8f9fa;--gray-100:#f1f3f5;--gray-200:#e9ecef;--gray-300:#dee2e6;
+  --gray-400:#ced4da;--gray-500:#adb5bd;--gray-600:#868e96;--gray-700:#495057;
+  --gray-800:#343a40;--gray-900:#212529;
+  --radius:12px;--radius-lg:20px;--radius-xl:28px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.06);--shadow:0 4px 24px rgba(0,0,0,.08);
+  --shadow-lg:0 12px 48px rgba(0,0,0,.1);
+  --transition:all .3s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%;height:auto}
+.container{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:'Outfit',sans-serif;font-weight:700;letter-spacing:-.02em}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:60px;font-weight:600;font-size:.88rem;cursor:pointer;border:none;font-family:'DM Sans',sans-serif;transition:var(--transition);white-space:nowrap;text-decoration:none}
+.btn-black{background:var(--black);color:var(--white)}.btn-black:hover{background:#222;transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.2)}
+.btn-outline{background:transparent;color:var(--black);border:1.5px solid var(--gray-300)}.btn-outline:hover{border-color:var(--black);background:var(--gray-50)}
+.btn-gold{background:var(--gold);color:var(--white)}.btn-gold:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.btn-green{background:#22c55e;color:var(--white)}.btn-green:hover{background:#16a34a;transform:translateY(-2px)}
+.btn-lg{padding:16px 36px;font-size:1rem}
+.btn-sm{padding:10px 22px;font-size:.82rem}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;display:flex;align-items:center;background:rgba(255,255,255,.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);transition:var(--transition)}
+nav.sc{box-shadow:0 1px 12px rgba(0,0,0,.06)}
+.nav-inner{width:100%;max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo-img{height:36px;width:auto;object-fit:contain}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-link{font-size:.84rem;font-weight:500;color:var(--gray-700);transition:var(--transition);cursor:pointer}
+.nav-link:hover{color:var(--black)}
+.nav-ctas{display:flex;gap:10px;align-items:center}
+.nav-phone{font-size:.82rem;font-weight:600;color:var(--gray-700);display:flex;align-items:center;gap:6px}
+@media(max-width:900px){.nav-links{display:none}}
+@media(max-width:600px){.nav-phone{display:none}}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;background:var(--white);overflow:hidden;padding-top:64px}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:60px 0 40px}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--gold-light);border:1px solid var(--gold-border);color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:50px;margin-bottom:20px}
+.hero-badge .dot{width:7px;height:7px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-title{font-size:clamp(2rem,4.5vw,3.4rem);line-height:1.08;margin-bottom:16px;color:var(--black)}
+.hero-title .gold{color:var(--gold)}
+.hero-sub{font-size:1rem;color:var(--gray-600);line-height:1.7;font-weight:400;margin-bottom:32px;max-width:440px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
+.hero-stats{display:flex;gap:40px}
+.hero-stat .num{font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:800;color:var(--black)}
+.hero-stat .lbl{font-size:.72rem;color:var(--gray-500);margin-top:2px;text-transform:uppercase;letter-spacing:.06em;font-weight:500}
+.hero-img-wrap{position:relative;display:flex;align-items:center;justify-content:center}
+.hero-img{max-width:100%;border-radius:var(--radius-xl)}
+@media(max-width:768px){.hero-inner{grid-template-columns:1fr;text-align:center}.hero-sub{margin:0 auto 32px}.hero-ctas{justify-content:center}.hero-stats{justify-content:center}.hero-img-wrap{order:-1;margin-bottom:10px}}
+
+/* TRUST BAR */
+.trust{padding:20px 0;border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);background:var(--gray-50)}
+.trust-items{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;color:var(--gray-700);font-size:.82rem;font-weight:500}
+@media(max-width:600px){.trust-items{gap:16px}.trust-item{font-size:.75rem}}
+
+/* SECTION HEADERS */
+.sec-badge{display:inline-flex;align-items:center;gap:6px;background:var(--gold-light);border:1px solid var(--gold-border);color:var(--gold);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:50px;margin-bottom:14px}
+.sec-title{font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.15;margin-bottom:12px}
+.sec-sub{color:var(--gray-600);font-size:.95rem;line-height:1.7;font-weight:400;max-width:560px}
+.sec-center{text-align:center}.sec-center .sec-sub{margin:0 auto}
+
+/* DIFFERENTIATORS */
+.diff{padding:80px 0;background:var(--white)}
+.diff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+.diff-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:32px 24px;text-align:center;transition:var(--transition)}
+.diff-card:hover{border-color:var(--gold-border);box-shadow:var(--shadow)}
+.diff-icon{width:56px;height:56px;margin:0 auto 18px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;background:var(--gold-light);border:1px solid var(--gold-border)}
+.diff-title{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;margin-bottom:8px}
+.diff-desc{color:var(--gray-600);font-size:.84rem;line-height:1.6;font-weight:400}
+@media(max-width:768px){.diff-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.diff-grid{grid-template-columns:1fr}}
+
+/* VEHICLES */
+.vehicles{padding:80px 0;background:var(--gray-50)}
+.veh-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-top:48px}
+.veh-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-xl);overflow:hidden;transition:var(--transition)}
+.veh-card:hover{box-shadow:var(--shadow-lg);border-color:var(--gold-border)}
+.veh-img-wrap{background:var(--white);padding:24px;display:flex;align-items:center;justify-content:center}
+.veh-img{max-height:280px;object-fit:contain}
+.veh-body{padding:28px 28px 32px}
+.veh-cat{display:inline-flex;align-items:center;gap:6px;background:var(--gold-light);border:1px solid var(--gold-border);color:var(--gold);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:50px;margin-bottom:12px}
+.veh-name{font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:8px}
+.veh-desc{color:var(--gray-600);font-size:.88rem;line-height:1.65}
+.veh-features{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.veh-feat{background:var(--gray-50);border:1px solid var(--gray-200);color:var(--gray-700);font-size:.74rem;padding:4px 12px;border-radius:50px;font-weight:500}
+@media(max-width:640px){.veh-grid{grid-template-columns:1fr}}
+
+/* MEDICAL */
+.medical{padding:80px 0;background:var(--white)}
+.med-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center}
+.med-list{list-style:none;margin:24px 0 32px;display:flex;flex-direction:column;gap:14px}
+.med-item{display:flex;align-items:flex-start;gap:12px;font-size:.9rem;color:var(--gray-700);line-height:1.6}
+.med-item .ico{width:24px;height:24px;border-radius:6px;background:var(--gold-light);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0;margin-top:2px}
+.med-visual{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:40px;text-align:center}
+.med-visual-icon{font-size:4rem;margin-bottom:16px}
+.med-visual-title{font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:8px}
+.med-visual-desc{color:var(--gray-600);font-size:.88rem;line-height:1.6}
+@media(max-width:768px){.med-inner{grid-template-columns:1fr}.med-visual{order:-1}}
+
+/* SIMULATOR */
+.simulator{padding:80px 0;background:var(--gray-50)}
+.sim-wrap{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:40px;max-width:860px;margin:40px auto 0;box-shadow:var(--shadow)}
+.stabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.stab{padding:9px 18px;border-radius:50px;font-size:.8rem;font-weight:600;cursor:pointer;border:1.5px solid var(--gray-300);color:var(--gray-600);background:transparent;font-family:'DM Sans',sans-serif;transition:var(--transition)}
+.stab.a{background:var(--black);border-color:var(--black);color:var(--white)}
+.stab:hover:not(.a){border-color:var(--black);color:var(--black)}
+.sim-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+.sf label{display:block;font-size:.74rem;font-weight:600;color:var(--gray-600);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+.sf input,.sf select{width:100%;padding:12px 14px;border-radius:var(--radius);border:1.5px solid var(--gray-300);background:var(--white);color:var(--black);font-family:'DM Sans',sans-serif;font-size:.87rem;outline:none;transition:var(--transition)}
+.sf input:focus,.sf select:focus{border-color:var(--black);box-shadow:0 0 0 3px rgba(0,0,0,.06)}
+.sf input::placeholder{color:var(--gray-400)}
+.sf select option{background:var(--white);color:var(--black)}
+.ac-wrap{position:relative}
+.ac-input-row{display:flex;gap:0;align-items:stretch}
+.ac-input-row input{border-radius:var(--radius) 0 0 var(--radius);flex:1}
+.geo-btn{width:48px;background:var(--black);color:var(--white);border:1.5px solid var(--black);border-radius:0 var(--radius) var(--radius) 0;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:var(--transition);flex-shrink:0}
+.geo-btn:hover{background:#222}
+.geo-btn.loading{opacity:.6;cursor:wait}
+.ac-drop{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--white);border:1.5px solid var(--black);border-radius:var(--radius);z-index:500;display:none;max-height:220px;overflow-y:auto;box-shadow:var(--shadow-lg)}
+.ac-drop.open{display:block}
+.ac-item{padding:10px 14px;cursor:pointer;font-size:.84rem;color:var(--gray-700);border-bottom:1px solid var(--gray-200);display:flex;align-items:center;gap:9px;transition:var(--transition)}
+.ac-item:last-child{border-bottom:none}
+.ac-item:hover,.ac-item.sel{background:var(--gold-light)}
+.aci-label{font-weight:600;font-size:.84rem;display:block}
+.aci-sub{font-size:.72rem;color:var(--gray-500);display:block;margin-top:1px}
+.aci-ico{font-size:.95rem;flex-shrink:0}
+.ac-loading,.ac-err{padding:12px 14px;font-size:.8rem;color:var(--gray-500);text-align:center}
+.ac-err{color:#e03131}
+.dist-info{display:none;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:10px 14px;margin-bottom:14px;font-size:.8rem;color:var(--gray-600)}
+.sbtn{width:100%;padding:15px;background:var(--black);color:var(--white);border:none;border-radius:60px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;transition:var(--transition);margin-bottom:0}
+.sbtn:hover{background:#222;transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.sbtn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+
+/* === BLACKLANE-STYLE VEHICLE RESULTS === */
+.sres{display:none;animation:fadeUp .4s ease;margin-top:24px}
+.sres.show{display:block}
+.sres-route{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px 18px;margin-bottom:20px;font-size:.86rem;color:var(--gray-600);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sres-route strong{color:var(--black);font-weight:600}
+.sres-route .arrow{color:var(--gold);font-weight:700;font-size:1rem}
+.sres-route .dist-badge{margin-left:auto;background:var(--gold-light);border:1px solid var(--gold-border);color:var(--gold);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:50px}
+.sres-heading{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;margin-bottom:16px;color:var(--black);text-align:left}
+
+/* Vehicle option cards */
+.veh-options{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.veh-option{background:var(--white);border:2px solid var(--gray-200);border-radius:var(--radius-lg);cursor:pointer;transition:var(--transition);overflow:hidden;position:relative}
+.veh-option:hover{border-color:var(--gray-400);box-shadow:var(--shadow)}
+.veh-option.selected{border-color:var(--black);box-shadow:0 0 0 1px var(--black)}
+.veh-option.selected::after{content:'✓';position:absolute;top:12px;right:12px;width:26px;height:26px;background:var(--black);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;z-index:2}
+.veh-opt-img{background:var(--gray-50);padding:16px;display:flex;align-items:center;justify-content:center;height:150px;position:relative}
+.veh-opt-img img{max-height:120px;object-fit:contain;width:auto}
+.veh-opt-body{padding:18px}
+.veh-opt-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:4px}
+.veh-opt-name{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.veh-opt-meta{display:flex;gap:12px;margin-bottom:14px}
+.veh-opt-tag{font-size:.73rem;color:var(--gray-600);display:flex;align-items:center;gap:4px}
+.veh-opt-price-row{display:flex;align-items:baseline;justify-content:space-between;padding-top:12px;border-top:1px solid var(--gray-200)}
+.veh-opt-price{font-family:'Outfit',sans-serif;font-size:1.7rem;font-weight:800;color:var(--black)}
+.veh-opt-price-label{font-size:.7rem;color:var(--gray-500)}
+.veh-opt-dur{font-size:.78rem;color:var(--gray-600);font-weight:500;text-align:right}
+.veh-opt-dur span{display:block;font-size:.65rem;color:var(--gray-500)}
+
+/* Confirm panel after selection */
+.sres-confirm{display:none;background:var(--black);border-radius:var(--radius-lg);padding:22px 24px;animation:fadeUp .3s ease;margin-top:4px}
+.sres-confirm.show{display:block}
+.sres-confirm-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.sres-confirm-info{display:flex;align-items:center;gap:14px;color:var(--white)}
+.sres-confirm-price{font-family:'Outfit',sans-serif;font-size:1.8rem;font-weight:800;color:var(--white)}
+.sres-confirm-sep{width:1px;height:32px;background:rgba(255,255,255,.2)}
+.sres-confirm-detail{display:flex;flex-direction:column;gap:2px}
+.sres-confirm-veh{font-size:.88rem;font-weight:600;color:var(--white)}
+.sres-confirm-label{font-size:.74rem;color:var(--gray-500)}
+.sres-confirm-ctas{display:flex;gap:9px;flex-wrap:wrap}
+.sres-confirm-ctas .btn{min-width:130px;justify-content:center}
+.snote{background:var(--gold-light);border:1px solid var(--gold-border);border-radius:var(--radius);padding:10px 14px;font-size:.77rem;color:var(--gold);margin-top:16px;text-align:center}
+
+/* Medical result */
+.sres-medical{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:28px;text-align:center;animation:fadeUp .4s ease;display:none;margin-top:24px}
+.sres-medical.show{display:block}
+.sres-medical-price{font-family:'Outfit',sans-serif;font-size:2.2rem;font-weight:800;margin-bottom:4px}
+.sres-medical-label{color:var(--gray-500);font-size:.82rem;margin-bottom:16px}
+
+/* Dispo result */
+.sres-dispo{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:28px;text-align:center;animation:fadeUp .4s ease;display:none;margin-top:24px}
+.sres-dispo.show{display:block}
+
+@media(max-width:540px){
+  .veh-options{grid-template-columns:1fr}
+  .veh-opt-img{height:130px}
+  .sres-confirm-inner{flex-direction:column;text-align:center}
+  .sres-confirm-ctas{width:100%}
+  .sres-confirm-ctas .btn{flex:1}
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:640px){.sim-grid{grid-template-columns:1fr}.sim-wrap{padding:20px}}
+.sim-note{text-align:center;margin-top:20px;font-size:.78rem;color:var(--gray-500);max-width:520px;margin-left:auto;margin-right:auto;line-height:1.6}
+
+
+/* LONG DISTANCE */
+.long-distance{padding:84px 0;background:linear-gradient(180deg,#fff 0%,#faf9f6 100%);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
+.long-top{max-width:760px;margin:0 auto 36px;text-align:center}
+.long-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}
+.long-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:28px;box-shadow:var(--shadow-sm)}
+.long-card h3{font-family:'Outfit',sans-serif;font-size:1.2rem;margin-bottom:8px}
+.long-card p{color:var(--gray-600);line-height:1.7;font-size:.95rem}
+.long-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.long-kpi{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:16px;padding:14px 12px;text-align:center}
+.long-kpi strong{display:block;font-family:'Outfit',sans-serif;font-size:1rem;margin-bottom:4px}
+.long-kpi span{font-size:.78rem;color:var(--gray-600)}
+.long-table{width:100%;border-collapse:collapse;margin-top:16px}
+.long-table tr{border-bottom:1px solid var(--gray-200)}
+.long-table tr:last-child{border-bottom:none}
+.long-table td{padding:12px 0;font-size:.92rem}
+.long-table td:last-child{text-align:right;font-weight:800;font-family:'Outfit',sans-serif}
+.long-note{margin-top:16px;font-size:.78rem;color:var(--gray-500);line-height:1.6}
+.long-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.long-booking-box{margin-top:24px;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:20px;padding:18px}
+.long-booking-box label{display:block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--gray-600);margin-bottom:10px}
+.long-booking-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+.long-booking-row select{width:100%;padding:14px 16px;border-radius:999px;border:1.5px solid var(--gray-300);background:var(--white);color:var(--black);font-family:'DM Sans',sans-serif;font-size:.92rem;outline:none}
+.long-booking-row select:focus{border-color:var(--black);box-shadow:0 0 0 3px rgba(0,0,0,.06)}
+.long-booking-help{margin-top:10px;font-size:.78rem;color:var(--gray-500);line-height:1.5}
+@media(max-width:640px){.long-booking-row{grid-template-columns:1fr}.long-booking-row .btn{width:100%}}
+
+.long-side{display:grid;gap:22px}
+.long-list{display:grid;gap:10px;margin-top:14px}
+.long-item{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:16px;background:var(--gray-50);border:1px solid var(--gray-200)}
+.long-item span{color:var(--gray-600)}
+.long-item strong{font-family:'Outfit',sans-serif}
+.long-benefits{display:grid;gap:10px;margin-top:14px}
+.long-benefit{display:flex;gap:12px;align-items:flex-start}
+.long-benefit i{font-style:normal;width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--gold-light);border:1px solid var(--gold-border);flex-shrink:0}
+@media(max-width:900px){.long-grid{grid-template-columns:1fr}.long-kpis{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.long-kpis{grid-template-columns:1fr 1fr}.long-card{padding:22px}.long-table td{font-size:.86rem}}
+
+/* PARTNERS */
+.partners{padding:60px 0;background:var(--white);border-top:1px solid var(--gray-200)}
+.partners-grid{display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap;margin-top:36px}
+.partner-name{font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:600;color:var(--gray-500);letter-spacing:.02em;padding:12px 24px;border:1px solid var(--gray-200);border-radius:var(--radius);transition:var(--transition)}
+.partner-name:hover{border-color:var(--gold-border);color:var(--gray-700)}
+
+/* ZONES */
+.zones{padding:80px 0;background:var(--gray-50)}
+.zones-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px}
+.zone-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:24px}
+.zone-title{display:flex;align-items:center;gap:10px;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;margin-bottom:14px}
+.zone-title .emoji{width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;background:var(--gold-light);border:1px solid var(--gold-border);font-size:1rem;flex-shrink:0}
+.zone-tags{display:flex;flex-wrap:wrap;gap:8px}
+.ztag{display:inline-flex;padding:7px 12px;border-radius:50px;background:var(--gray-50);border:1px solid var(--gray-200);color:var(--gray-700);font-size:.8rem;font-weight:500}
+@media(max-width:768px){.zones-grid{grid-template-columns:1fr}}
+
+/* RESERVATION */
+.reservation{padding:80px 0;background:var(--white)}
+.res-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+.res-contacts{display:flex;flex-direction:column;gap:12px;margin:24px 0}
+.res-contact{display:flex;align-items:center;gap:14px;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px;transition:var(--transition)}
+.res-contact:hover{border-color:var(--gold-border)}
+.res-contact-ico{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;background:var(--gold-light);border:1px solid var(--gold-border)}
+.res-contact-lbl{font-size:.72rem;color:var(--gray-500);font-weight:500}
+.res-contact-val{font-weight:700;font-size:.88rem}
+.form-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:36px}
+.form-title{font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:24px}
+.fg{margin-bottom:16px}
+.fg label{display:block;font-size:.74rem;font-weight:600;color:var(--gray-600);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+.fg input,.fg select,.fg textarea{width:100%;padding:12px 14px;border-radius:var(--radius);border:1.5px solid var(--gray-300);background:var(--white);color:var(--black);font-family:'DM Sans',sans-serif;font-size:.87rem;outline:none;transition:var(--transition);resize:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--black);box-shadow:0 0 0 3px rgba(0,0,0,.06)}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--gray-400)}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fsub{width:100%;padding:14px;background:var(--black);color:var(--white);border:none;border-radius:60px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;transition:var(--transition);margin-top:6px}
+.fsub:hover{background:#222;transform:translateY(-1px)}
+.form-note{text-align:center;font-size:.72rem;color:var(--gray-500);margin-top:10px}
+.form-success{display:none;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);border-radius:var(--radius);padding:20px;text-align:center;animation:fadeUp .4s ease}
+.form-success.show{display:block}
+@media(max-width:768px){.res-wrap{grid-template-columns:1fr;gap:40px}.form-card{padding:24px}.fg-row{grid-template-columns:1fr}}
+
+/* FOOTER */
+footer{background:var(--black);color:var(--white);padding:60px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
+.footer-logo{height:40px;margin-bottom:16px;filter:invert(1) brightness(2)}
+.footer-desc{color:var(--gray-500);font-size:.88rem;line-height:1.7;margin-bottom:20px}
+.footer-siret{color:var(--gray-600);font-size:.74rem;line-height:1.7}
+.footer-heading{font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-400);margin-bottom:16px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a{color:var(--gray-500);font-size:.86rem;transition:var(--transition)}.footer-links a:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;margin-top:40px;display:flex;justify-content:space-between;font-size:.78rem;color:var(--gray-600)}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:8px;text-align:center}}
+
+/* PAGES */
+.page{display:none}.page.active{display:block}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.burger svg{width:24px;height:24px}
+@media(max-width:900px){.burger{display:flex}}
+.mobile-menu{display:none;position:fixed;inset:0;z-index:999;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:600;color:var(--black)}
+.mobile-close{position:absolute;top:20px;right:24px;background:none;border:none;font-size:1.6rem;cursor:pointer}
+.gold-line{width:40px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:16px}
+.sec-center .gold-line{margin:0 auto 16px}
+</style>
+<link rel="icon" type="image/png" href="assets/favicon.png"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a onclick="showPage('accueil')" style="cursor:pointer"><img src="assets/adequat-logo.png" alt="Adéquat Taxi" class="logo-img"/></a>
+    <div class="nav-links">
+      <a class="nav-link" onclick="showPage('accueil')">Accueil</a>
+      <a class="nav-link" onclick="showPage('accueil');setTimeout(function(){document.getElementById('simulateur').scrollIntoView({behavior:'smooth'})},100)">Réservation</a>
+      <a class="nav-link" onclick="showPage('medical')">Transport médical</a>
+      <a class="nav-link" onclick="showPage('vehicules')">Nos véhicules</a>
+      <a class="nav-link" onclick="showPage('contact')">Contact</a>
+    </div>
+    <div class="nav-ctas">
+      <a class="nav-phone" href="tel:+33698352990">📞 06 98 35 29 90</a>
+      <a class="btn btn-black btn-sm" href="tel:+33698352990">Appeler</a>
+    </div>
+    <button class="burger" onclick="document.getElementById('mob-menu').classList.add('open')"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mob-menu">
+  <button class="mobile-close" onclick="this.parentElement.classList.remove('open')">✕</button>
+  <a onclick="showPage('accueil');this.parentElement.classList.remove('open')">Accueil</a>
+  <a onclick="showPage('medical');this.parentElement.classList.remove('open')">Transport médical</a>
+  <a onclick="showPage('vehicules');this.parentElement.classList.remove('open')">Nos véhicules</a>
+  <a onclick="showPage('accueil');this.parentElement.classList.remove('open');setTimeout(function(){document.getElementById('choix-longue-distance').scrollIntoView({behavior:'smooth',block:'start'});},100)">Longue distance</a>
+  <a onclick="showPage('contact');this.parentElement.classList.remove('open')">Contact</a>
+  <a class="btn btn-black" href="tel:+33698352990">📞 Appeler</a>
+  <a class="btn btn-green" href="https://wa.me/33698352990">💬 WhatsApp</a>
+</div>
+
+<!-- ═══════════════ PAGE ACCUEIL ═══════════════ -->
+<div class="page active" id="p-accueil">
+
+<section class="hero" id="accueil">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge"><span class="dot"></span> Disponible maintenant</div>
+        <h1 class="hero-title">Réservez votre taxi<br>à <span class="gold">Clermont-Ferrand</span></h1>
+        <p class="hero-sub">Estimation immédiate · Disponible 24h/24 · Transport conventionné CPAM</p>
+        <div class="hero-ctas">
+          <a class="btn btn-black btn-lg" onclick="document.getElementById('simulateur').scrollIntoView({behavior:'smooth'})">Réserver</a>
+          <a class="btn btn-outline btn-lg" onclick="document.getElementById('choix-longue-distance').scrollIntoView({behavior:'smooth',block:'start'})">Longue distance</a>
+          <a class="btn btn-outline btn-lg" href="tel:+33698352990">📞 Appeler</a>
+          <a class="btn btn-green btn-lg" href="https://wa.me/33698352990">💬 WhatsApp</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="num">24/7</div><div class="lbl">Disponibilité</div></div>
+          <div class="hero-stat"><div class="num">CPAM</div><div class="lbl">Conventionné</div></div>
+          <div class="hero-stat"><div class="num">63</div><div class="lbl">Puy-de-Dôme</div></div>
+        </div>
+      </div>
+      <div class="hero-img-wrap">
+        <img src="assets/eco-taxi-lumineux.jpg" alt="Adéquat Taxi Eco Électrique" class="hero-img"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust"><div class="container"><div class="trust-items">
+  <div class="trust-item">✅ Chauffeur professionnel</div>
+  <div class="trust-item">⚡ Réponse immédiate</div>
+  <div class="trust-item">🏥 Conventionné CPAM</div>
+  <div class="trust-item">🔒 Sans intermédiaire</div>
+  <div class="trust-item">🌿 Véhicule électrique</div>
+</div></div></div>
+
+<section class="diff"><div class="container sec-center">
+  <div class="sec-badge">Nos engagements</div>
+  <h2 class="sec-title">Un service premium, pensé pour vous</h2>
+  <p class="sec-sub">Un taxi professionnel à Clermont-Ferrand, moderne, fiable et disponible à tout moment.</p>
+  <div class="diff-grid">
+    <div class="diff-card"><div class="diff-icon">🏥</div><div class="diff-title">Conventionné CPAM</div><div class="diff-desc">Transport médical pris en charge. Sans avance de frais sous conditions.</div></div>
+    <div class="diff-card"><div class="diff-icon">⚡</div><div class="diff-title">Tesla électrique</div><div class="diff-desc">Véhicule propre, silencieux et confortable. Mobilité responsable.</div></div>
+    <div class="diff-card"><div class="diff-icon">🚐</div><div class="diff-title">Mercedes Business Van</div><div class="diff-desc">Mercedes Classe V 7 places. Idéal groupes, séminaires et transferts VIP.</div></div>
+    <div class="diff-card"><div class="diff-icon">🕐</div><div class="diff-title">Service 24h/24</div><div class="diff-desc">Disponible jour et nuit, week-ends et jours fériés inclus.</div></div>
+  </div>
+</div></section>
+
+<section class="vehicles"><div class="container sec-center">
+  <div class="sec-badge">Notre flotte</div>
+  <h2 class="sec-title">Des véhicules d'exception</h2>
+  <p class="sec-sub">Confort, élégance et performance pour chacun de vos déplacements.</p>
+  <div class="veh-grid">
+    <div class="veh-card">
+      <div class="veh-img-wrap"><img src="assets/eco-electrique.jpg" alt="Tesla Model Y Eco Électrique" class="veh-img"/></div>
+      <div class="veh-body"><div class="veh-cat">Eco Électrique</div><div class="veh-name">Tesla Model Y</div><div class="veh-desc">Silence absolu, zéro émission. Le choix premium et responsable pour vos trajets quotidiens.</div>
+        <div class="veh-features"><span class="veh-feat">100% électrique</span><span class="veh-feat">Climatisation</span><span class="veh-feat">4 passagers</span><span class="veh-feat">Chargeurs USB</span></div>
+      </div>
+    </div>
+    <div class="veh-card">
+      <div class="veh-img-wrap"><img src="assets/business-van.jpg" alt="Mercedes Classe V Business Van" class="veh-img"/></div>
+      <div class="veh-body"><div class="veh-cat">Business Van</div><div class="veh-name">Mercedes Classe V</div><div class="veh-desc">Espace généreux, finitions haut de gamme. L'excellence pour les groupes et les événements.</div>
+        <div class="veh-features"><span class="veh-feat">7 places</span><span class="veh-feat">Grand coffre</span><span class="veh-feat">Climatisation</span><span class="veh-feat">Confort VIP</span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="medical"><div class="container"><div class="med-inner">
+  <div>
+    <div class="sec-badge">Transport médical</div>
+    <h2 class="sec-title">Transport conventionné CPAM</h2>
+    <p class="sec-sub">Prise en charge de vos trajets médicaux selon les conditions de l'Assurance Maladie.</p>
+    <ul class="med-list">
+      <li class="med-item"><span class="ico">✓</span> Consultations et hospitalisations</li>
+      <li class="med-item"><span class="ico">✓</span> Séances de dialyse</li>
+      <li class="med-item"><span class="ico">✓</span> Chimiothérapie et radiothérapie</li>
+      <li class="med-item"><span class="ico">✓</span> Centres thermaux et rééducation</li>
+      <li class="med-item"><span class="ico">✓</span> ALD — Affection longue durée</li>
+      <li class="med-item"><span class="ico">✓</span> Sans avance de frais sous conditions</li>
+    </ul>
+    <a class="btn btn-black btn-lg" href="tel:+33698352990">Réserver mon transport médical</a>
+  </div>
+  <div class="med-visual"><div class="med-visual-icon">🏥</div><div class="med-visual-title">Conventionné Assurance Maladie</div><div class="med-visual-desc">Prescription médicale de transport requise. Nous gérons l'ensemble des démarches administratives avec la CPAM.</div></div>
+</div></div></section>
+
+<!-- ═══════ SIMULATEUR BLACKLANE-STYLE ═══════ -->
+<section class="simulator" id="simulateur">
+  <div class="container sec-center">
+    <div class="sec-badge">Estimation tarifaire</div>
+    <h2 class="sec-title">Où allez-vous ?</h2>
+    <p class="sec-sub">Entrez vos adresses, nous vous proposons le véhicule idéal.</p>
+    <div class="sim-wrap">
+      <div class="stabs">
+        <button class="stab a" onclick="setSim('c',this)">🚗 Course</button>
+        <button class="stab" onclick="setSim('a',this)">✈️ Aéroport</button>
+        <button class="stab" onclick="setSim('d',this)">⏱️ Mise à disposition</button>
+        <button class="stab" onclick="setSim('m',this)">🏥 Médical</button>
+      </div>
+
+      <!-- Course classique — NO vehicle select -->
+      <div id="sc">
+        <div class="sim-grid">
+          <div class="sf"><label>Départ</label><div class="ac-wrap"><div class="ac-input-row"><input id="addr-from" type="text" placeholder="Adresse, lieu ou ville…" oninput="acSearch(this,'drop-from')" autocomplete="off"/><button class="geo-btn" onclick="useMyLocation('addr-from',this)" title="Ma position">📍</button></div><div class="ac-drop" id="drop-from"></div></div></div>
+          <div class="sf"><label>Arrivée</label><div class="ac-wrap"><input id="addr-to" type="text" placeholder="Adresse, lieu ou ville…" oninput="acSearch(this,'drop-to')" autocomplete="off"/><div class="ac-drop" id="drop-to"></div></div></div>
+        </div>
+        <div class="sf" style="margin-bottom:16px"><label>Horaire</label><select id="stime"><option value="day">Journée (6h–19h)</option><option value="night">Nuit / Dim. / Férié</option></select></div>
+        <div class="dist-info" id="dist-info"></div>
+      </div>
+
+      <!-- Aéroport — NO vehicle select -->
+      <div id="sa" style="display:none">
+        <div class="sim-grid">
+          <div class="sf"><label>Votre adresse</label><div class="ac-wrap"><div class="ac-input-row"><input id="addr-from2" type="text" placeholder="Adresse de départ…" oninput="acSearch(this,'drop-from2')" autocomplete="off"/><button class="geo-btn" onclick="useMyLocation('addr-from2',this)" title="Ma position">📍</button></div><div class="ac-drop" id="drop-from2"></div></div></div>
+          <div class="sf"><label>Aéroport</label><select id="aair">
+  <optgroup label="France – Auvergne-Rhône-Alpes">
+    <option value="45.7869,3.1586">Clermont-Ferrand Auvergne (Aulnat)</option>
+    <option value="45.7194,5.0781">Lyon Saint-Exupéry</option>
+    <option value="45.7272,4.9443">Lyon-Bron</option>
+    <option value="45.3629,5.3294">Grenoble Alpes-Isère</option>
+    <option value="45.6392,5.8802">Chambéry Savoie Mont-Blanc</option>
+    <option value="45.9308,6.1063">Annecy Mont-Blanc</option>
+    <option value="45.5406,4.2964">Saint-Étienne Loire</option>
+    <option value="44.8914,2.4219">Aurillac Tronquières</option>
+    <option value="45.0807,3.7629">Le Puy-en-Velay Loudes</option>
+  </optgroup>
+  <optgroup label="France – Île-de-France">
+    <option value="48.7262,2.3652">Paris Orly</option>
+    <option value="49.0097,2.5479">Paris Charles-de-Gaulle (CDG)</option>
+    <option value="49.4544,2.1128">Paris Beauvais</option>
+    <option value="48.9694,2.4414">Paris Le Bourget</option>
+  </optgroup>
+  <optgroup label="France – Sud / Méditerranée">
+    <option value="43.4393,5.2214">Marseille Provence</option>
+    <option value="43.6653,7.2150">Nice Côte d’Azur</option>
+    <option value="43.5762,3.9630">Montpellier Méditerranée</option>
+    <option value="43.6293,1.3638">Toulouse-Blagnac</option>
+    <option value="43.7574,4.4163">Nîmes Grande Provence</option>
+    <option value="42.7404,2.8707">Perpignan Rivesaltes</option>
+    <option value="43.3235,3.3539">Béziers Cap d’Agde</option>
+    <option value="43.0973,6.1460">Toulon-Hyères</option>
+    <option value="43.9073,4.9019">Avignon Provence</option>
+    <option value="43.2158,2.3063">Carcassonne Sud de France</option>
+    <option value="43.3800,-0.4186">Pau Pyrénées</option>
+    <option value="43.4684,-1.5311">Biarritz Pays Basque</option>
+    <option value="43.1787,-0.0064">Tarbes Lourdes Pyrénées</option>
+  </optgroup>
+  <optgroup label="France – Ouest / Atlantique">
+    <option value="44.8283,-0.7156">Bordeaux Mérignac</option>
+    <option value="47.1532,-1.6107">Nantes Atlantique</option>
+    <option value="46.1792,-1.1953">La Rochelle Île de Ré</option>
+    <option value="46.5877,0.3067">Poitiers Biard</option>
+    <option value="45.8628,1.1794">Limoges Bellegarde</option>
+    <option value="45.0397,1.4856">Brive Vallée de la Dordogne</option>
+    <option value="44.8244,0.5186">Bergerac Dordogne Périgord</option>
+    <option value="48.0695,-1.7348">Rennes Bretagne</option>
+    <option value="48.4479,-4.4185">Brest Bretagne</option>
+    <option value="47.7606,-3.4400">Lorient Bretagne Sud</option>
+    <option value="47.9749,-4.1678">Quimper Bretagne</option>
+    <option value="49.3653,0.1543">Deauville Normandie</option>
+    <option value="49.1733,-0.4500">Caen Carpiquet</option>
+  </optgroup>
+  <optgroup label="France – Nord / Est">
+    <option value="50.5619,3.0894">Lille Lesquin</option>
+    <option value="48.5383,7.6282">Strasbourg Entzheim</option>
+    <option value="47.5896,7.5299">Bâle-Mulhouse-Freiburg</option>
+    <option value="48.9821,6.2513">Metz-Nancy-Lorraine</option>
+    <option value="49.6289,6.2147">Luxembourg Findel</option>
+    <option value="49.2087,4.1566">Reims Prunay</option>
+    <option value="47.2689,5.0900">Dijon Bourgogne</option>
+    <option value="47.0390,5.4273">Dole Jura</option>
+    <option value="47.4322,0.7276">Tours Val de Loire</option>
+    <option value="46.8622,1.7307">Châteauroux Centre</option>
+  </optgroup>
+  <optgroup label="France – Corse">
+    <option value="41.9236,8.8029">Ajaccio Napoléon Bonaparte</option>
+    <option value="42.5527,9.4837">Bastia Poretta</option>
+    <option value="42.5308,8.7932">Calvi Sainte-Catherine</option>
+    <option value="41.5006,9.0978">Figari Sud Corse</option>
+  </optgroup>
+  <optgroup label="Suisse">
+    <option value="46.2381,6.1089">Genève Aéroport</option>
+    <option value="47.4581,8.5555">Zurich Aéroport</option>
+  </optgroup>
+  <optgroup label="Belgique">
+    <option value="50.9014,4.4844">Bruxelles-Zaventem</option>
+    <option value="50.4592,4.4538">Bruxelles-Charleroi</option>
+    <option value="50.6374,5.4432">Liège Airport</option>
+    <option value="51.1894,4.4603">Anvers-Deurne</option>
+    <option value="51.1989,2.8622">Ostende-Bruges</option>
+  </optgroup>
+  <optgroup label="Espagne">
+    <option value="41.2974,2.0833">Barcelone El Prat</option>
+    <option value="40.4983,-3.5676">Madrid Barajas</option>
+    <option value="39.4893,-0.4816">Valence</option>
+    <option value="38.2822,-0.5582">Alicante-Elche</option>
+    <option value="41.9010,2.7605">Gérone-Costa Brava</option>
+    <option value="41.6662,-1.0416">Saragosse</option>
+    <option value="43.3011,-2.9106">Bilbao</option>
+    <option value="43.3565,-1.7906">Saint-Sébastien</option>
+    <option value="36.6749,-4.4991">Malaga-Costa del Sol</option>
+    <option value="37.4179,-5.8931">Séville</option>
+    <option value="39.5517,2.7388">Palma de Majorque</option>
+    <option value="38.8729,1.3731">Ibiza</option>
+  </optgroup>
+</select></div>
+        </div>
+        <div class="sim-grid">
+          <div class="sf"><label>Horaire</label><select id="stime2"><option value="day">Journée</option><option value="night">Nuit / Dim. / Férié</option></select></div>
+          <div class="sf"><label>Bagages volumineux</label><select id="abags"><option value="0">Non</option><option value="5">Oui (+5 €)</option></select></div>
+        </div>
+      </div>
+
+      <!-- Mise à dispo -->
+      <div id="sd" style="display:none">
+        <div class="sf" style="margin-bottom:16px"><label>Durée (heures)</label><select id="dh"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
+      </div>
+
+      <!-- Médical -->
+      <div id="sm" style="display:none">
+        <div style="background:var(--gold-light);border:1px solid var(--gold-border);border-radius:var(--radius);padding:20px;text-align:center">
+          <p style="font-size:.92rem;line-height:1.7;color:var(--gray-700)">Le transport médical est pris en charge par l'Assurance Maladie sur prescription médicale.<br><strong>Appelez-nous directement.</strong></p>
+        </div>
+      </div>
+
+      <button class="sbtn" id="calcBtn" onclick="calcPrice()">Voir les options</button>
+
+      <!-- VEHICLE SELECTION RESULTS (Blacklane style) -->
+      <div class="sres" id="sres">
+        <div class="sres-route" id="sres-route"></div>
+        <div class="sres-heading">Choisissez votre véhicule</div>
+        <div class="veh-options" id="veh-options"></div>
+        <div class="sres-confirm" id="sres-confirm">
+          <div class="sres-confirm-inner">
+            <div class="sres-confirm-info">
+              <div class="sres-confirm-price" id="confirm-price"></div>
+              <div class="sres-confirm-sep"></div>
+              <div class="sres-confirm-detail">
+                <div class="sres-confirm-veh" id="confirm-veh"></div>
+                <div class="sres-confirm-label" id="confirm-label"></div>
+              </div>
+            </div>
+            <div class="sres-confirm-ctas">
+              <a class="btn btn-gold" id="confirm-call" href="tel:+33698352990">📞 Réserver</a>
+              <a class="btn btn-green" id="confirm-wa" href="https://wa.me/33698352990">💬 WhatsApp</a>
+            </div>
+          </div>
+        </div>
+        <div class="snote">Estimation basée sur la tarification préfectorale en vigueur dans le Puy-de-Dôme. Tarif définitif au compteur.</div>
+      </div>
+
+      <!-- Medical result -->
+      <div class="sres-medical" id="sres-medical">
+        <div class="sres-medical-price">0 €</div>
+        <div class="sres-medical-label">Prise en charge Assurance Maladie</div>
+        <p style="font-size:.88rem;color:var(--gray-600);line-height:1.6;margin-bottom:20px">Sur prescription médicale — sans avance de frais sous conditions.<br>Nous gérons toute la démarche CPAM.</p>
+        <a class="btn btn-black btn-lg" href="tel:+33698352990">📞 Appelez le 06 98 35 29 90</a>
+      </div>
+
+      <!-- Dispo result -->
+      <div class="sres-dispo" id="sres-dispo">
+        <div style="font-family:'Outfit',sans-serif;font-size:2.2rem;font-weight:800;margin-bottom:4px" id="dispo-price"></div>
+        <div style="color:var(--gray-500);font-size:.82rem;margin-bottom:6px" id="dispo-label"></div>
+        <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px" id="dispo-tags"></div>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+          <a class="btn btn-black" href="tel:+33698352990">📞 Réserver</a>
+          <a class="btn btn-green" href="https://wa.me/33698352990">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <p class="sim-note">Estimation basée sur la tarification préfectorale en vigueur dans le Puy-de-Dôme. Tarif définitif au compteur.</p>
+  </div>
+</section>
+
+<section class="zones"><div class="container sec-center">
+  <div class="sec-badge">📍 Couverture</div>
+  <h2 class="sec-title">Zones desservies</h2>
+  <p class="sec-sub">Adéquat Taxi intervient sur Clermont-Ferrand, le Puy-de-Dôme et au-delà.</p>
+  <div class="zones-grid">
+    <div class="zone-card"><div class="zone-title"><span class="emoji">🏙️</span> Clermont-Ferrand & agglo</div><div class="zone-tags"><span class="ztag">Clermont-Fd Centre</span><span class="ztag">Chamalières</span><span class="ztag">Royat</span><span class="ztag">Beaumont</span><span class="ztag">Cournon</span><span class="ztag">Aubière</span><span class="ztag">Cébazat</span><span class="ztag">Gerzat</span></div></div>
+    <div class="zone-card"><div class="zone-title"><span class="emoji">✈️</span> Gares & Aéroport</div><div class="zone-tags"><span class="ztag">Aéroport Aulnat</span><span class="ztag">Gare SNCF</span><span class="ztag">Lyon Saint-Exupéry</span><span class="ztag">Gare Part-Dieu</span></div></div>
+    <div class="zone-card"><div class="zone-title"><span class="emoji">🏔️</span> Lacs & Montagne</div><div class="zone-tags"><span class="ztag">Aydat</span><span class="ztag">Chambon-sur-Lac</span><span class="ztag">Murol</span><span class="ztag">Saint-Nectaire</span><span class="ztag">Besse</span><span class="ztag">Super-Besse</span><span class="ztag">La Bourboule</span><span class="ztag">Le Mont-Dore</span><span class="ztag">Puy de Dôme</span><span class="ztag">Vulcania</span></div></div>
+    <div class="zone-card"><div class="zone-title"><span class="emoji">🌿</span> Communes rurales</div><div class="zone-tags"><span class="ztag">Saint-Saturnin</span><span class="ztag">Nébouzat</span><span class="ztag">Olby</span><span class="ztag">Rochefort-Montagne</span><span class="ztag">Laqueuille</span><span class="ztag">Perpezat</span><span class="ztag">Theix</span><span class="ztag">Pessade</span><span class="ztag">Randol</span><span class="ztag">Olloix</span><span class="ztag">Cournols</span><span class="ztag">Aurières</span><span class="ztag">Saulzet-le-Froid</span><span class="ztag">Le Vernet-Sainte-Marguerite</span></div></div>
+    <div class="zone-card"><div class="zone-title"><span class="emoji">🏥</span> Médical</div><div class="zone-tags"><span class="ztag">CHU Gabriel Montpied</span><span class="ztag">CHU Estaing</span><span class="ztag">Clinique Châtaigneraie</span><span class="ztag">Polyclinique du Parc</span></div></div>
+  </div>
+</div></section>
+
+
+<section class="long-distance" id="longue-distance"><div class="container">
+  <div class="long-top">
+    <div class="sec-badge">Longue distance</div>
+    <h2 class="sec-title">Taxi longue distance Clermont-Ferrand & toute la France</h2>
+    <p class="sec-sub">Adéquat Taxi vous accompagne au départ de Clermont-Ferrand pour vos transferts longue distance, trajets nationaux, aéroports et déplacements privés ou professionnels avec prix annoncés à l’avance.</p>
+  </div>
+
+  <div class="long-grid">
+    <div class="long-card">
+      <h3>Grille tarifaire longue distance</h3>
+      <p>Tarifs indicatifs longue distance au départ de Clermont-Ferrand et alentours. Pour un devis personnalisé ou un trajet sur mesure, contactez Adéquat Taxi directement.</p>
+
+      <div class="long-kpis">
+        <div class="long-kpi"><strong>24/7</strong><span>Disponibilité</span></div>
+        <div class="long-kpi"><strong>Prix fixes</strong><span>À l’avance</span></div>
+        <div class="long-kpi"><strong>Tesla & Mercedes</strong><span>Confort premium</span></div>
+        <div class="long-kpi"><strong>National</strong><span>Toutes régions</span></div>
+      </div>
+
+      <table class="long-table">
+        <tr><td>Lezoux</td><td>50 €</td></tr>
+        <tr><td>Maringues</td><td>50 €</td></tr>
+        <tr><td>Aigueperse</td><td>60 €</td></tr>
+        <tr><td>Issoire</td><td>70 €</td></tr>
+        <tr><td>Gannat</td><td>130 €</td></tr>
+        <tr><td>Ambert</td><td>130 €</td></tr>
+        <tr><td>Vichy</td><td>170 €</td></tr>
+        <tr><td>Saint-Flour</td><td>170 €</td></tr>
+        <tr><td>Montluçon</td><td>200 €</td></tr>
+        <tr><td>Aurillac</td><td>250 €</td></tr>
+        <tr><td>Lyon centre</td><td>360 €</td></tr>
+        <tr><td>Dijon</td><td>520 €</td></tr>
+        <tr><td>Limoges</td><td>550 €</td></tr>
+        <tr><td>Mende</td><td>260 €</td></tr>
+        <tr><td>Montpellier</td><td>750 €</td></tr>
+        <tr><td>Toulouse</td><td>850 €</td></tr>
+        <tr><td>Bordeaux</td><td>950 €</td></tr>
+        <tr><td>Aéroport Orly</td><td>1050 €</td></tr>
+        <tr><td>Aéroport CDG</td><td>780 €</td></tr>
+        <tr><td>Aéroport Beauvais</td><td>430 €</td></tr>
+        <tr><td>Aéroport Toulouse</td><td>850 €</td></tr>
+        <tr><td>Aéroport Genève</td><td>600 €</td></tr>
+      </table>
+
+      <div class="long-note">Mots-clés intégrés pour le référencement local : taxi longue distance Clermont-Ferrand, taxi toutes distances, transfert longue distance, chauffeur privé Clermont-Ferrand, taxi aéroport Clermont-Ferrand.</div>
+
+      <div id="choix-longue-distance"></div><div class="long-booking-box">
+        <label for="long-destination">Choisissez votre destination longue distance</label>
+        <div class="long-booking-row">
+          <select id="long-destination">
+            <option value="">Sélectionner une destination...</option>
+            <option value="Lezoux|50">Lezoux — 50 €</option>
+<option value="Maringues|50">Maringues — 50 €</option>
+<option value="Aigueperse|60">Aigueperse — 60 €</option>
+<option value="Issoire|70">Issoire — 70 €</option>
+<option value="Gannat|130">Gannat — 130 €</option>
+<option value="Ambert|130">Ambert — 130 €</option>
+<option value="Vichy|170">Vichy — 170 €</option>
+<option value="Saint-Flour|170">Saint-Flour — 170 €</option>
+<option value="Montluçon|200">Montluçon — 200 €</option>
+<option value="Aurillac|250">Aurillac — 250 €</option>
+<option value="Lyon centre|360">Lyon centre — 360 €</option>
+<option value="Dijon|520">Dijon — 520 €</option>
+<option value="Limoges|550">Limoges — 550 €</option>
+<option value="Mende|260">Mende — 260 €</option>
+<option value="Montpellier|750">Montpellier — 750 €</option>
+<option value="Toulouse|850">Toulouse — 850 €</option>
+<option value="Bordeaux|950">Bordeaux — 950 €</option>
+<option value="Aéroport Orly|1050">Aéroport Orly — 1050 €</option>
+<option value="Aéroport CDG|780">Aéroport CDG — 780 €</option>
+<option value="Aéroport Beauvais|430">Aéroport Beauvais — 430 €</option>
+<option value="Aéroport Toulouse|850">Aéroport Toulouse — 850 €</option>
+<option value="Aéroport Genève|600">Aéroport Genève — 600 €</option>
+          </select>
+          <button class="btn btn-green" type="button" onclick="reserveLongDistanceWhatsApp()">💬 Valider sur WhatsApp</button>
+        </div>
+        <div class="long-booking-help">Après sélection, WhatsApp s’ouvre avec la destination et le tarif automatiquement remplis.</div>
+      </div>
+    </div>
+
+    <div class="long-side">
+      <div class="long-card">
+        <h3>Destinations fréquentes</h3>
+        <div class="long-list">
+          <div class="long-item"><span>Clermont-Ferrand → Paris</span><strong>sur devis</strong></div>
+          <div class="long-item"><span>Clermont-Ferrand → Lyon</span><strong>rapide</strong></div>
+          <div class="long-item"><span>Clermont-Ferrand → Genève</span><strong>premium</strong></div>
+          <div class="long-item"><span>Clermont-Ferrand → Orly / CDG</span><strong>aéroports</strong></div>
+        </div>
+      </div>
+
+      <div class="long-card">
+        <h3>Pourquoi choisir Adéquat Taxi</h3>
+        <div class="long-benefits">
+          <div class="long-benefit"><i>✓</i><div><strong>Prix annoncé avant le départ</strong><p>Idéal pour vos transferts longue distance au départ de Clermont-Ferrand.</p></div></div>
+          <div class="long-benefit"><i>✓</i><div><strong>Confort premium</strong><p>Tesla Model Y et Mercedes Classe V pour voyager dans les meilleures conditions.</p></div></div>
+          <div class="long-benefit"><i>✓</i><div><strong>Disponibilité 24h/24</strong><p>Départs matinaux, retours tardifs, gares et aéroports sur réservation.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+
+<section class="partners"><div class="container sec-center">
+  <div class="sec-badge">Confiance</div>
+  <h2 class="sec-title">Nos partenaires</h2>
+  <div class="partners-grid">
+    <div class="partner-name">AXA Assistance</div>
+    <div class="partner-name">Save Assistance</div>
+    <div class="partner-name">Mondial Assistance</div>
+    <div class="partner-name">Europ Assistance</div>
+    <div class="partner-name">ARC Europe</div>
+  </div>
+</div></section>
+
+</div><!-- end p-accueil -->
+
+<!-- ═══════ PAGE TRANSPORT MÉDICAL ═══════ -->
+<div class="page" id="p-medical">
+<section style="padding:120px 0 80px;background:var(--white)"><div class="container">
+  <div class="gold-line"></div><div class="sec-badge">Transport médical</div>
+  <h2 class="sec-title">Transport conventionné CPAM</h2>
+  <p class="sec-sub" style="margin-bottom:40px">Adéquat Taxi est conventionné par l'Assurance Maladie pour le transport de patients.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px">
+    <div class="diff-card"><div class="diff-icon">🏥</div><div class="diff-title">Consultations</div><div class="diff-desc">Trajets vers vos rendez-vous médicaux et hospitalisations.</div></div>
+    <div class="diff-card"><div class="diff-icon">💊</div><div class="diff-title">Dialyse & Traitements</div><div class="diff-desc">Chimiothérapie, radiothérapie, dialyse. Transport ponctuel.</div></div>
+    <div class="diff-card"><div class="diff-icon">♨️</div><div class="diff-title">Centres thermaux</div><div class="diff-desc">La Bourboule, Le Mont-Dore, Vichy.</div></div>
+  </div>
+  <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:36px;max-width:680px">
+    <h3 style="font-family:'Outfit',sans-serif;font-size:1.15rem;margin-bottom:16px">Comment ça fonctionne ?</h3>
+    <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:28px">
+      <div style="display:flex;gap:14px;align-items:flex-start"><span style="width:32px;height:32px;border-radius:50%;background:var(--black);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:700;flex-shrink:0">1</span><div><strong>Prescription médicale</strong><br><span style="color:var(--gray-600);font-size:.88rem">Votre médecin prescrit un transport sanitaire.</span></div></div>
+      <div style="display:flex;gap:14px;align-items:flex-start"><span style="width:32px;height:32px;border-radius:50%;background:var(--black);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:700;flex-shrink:0">2</span><div><strong>Appelez-nous</strong><br><span style="color:var(--gray-600);font-size:.88rem">Nous organisons votre transport et gérons les démarches CPAM.</span></div></div>
+      <div style="display:flex;gap:14px;align-items:flex-start"><span style="width:32px;height:32px;border-radius:50%;background:var(--black);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:700;flex-shrink:0">3</span><div><strong>Sans avance de frais</strong><br><span style="color:var(--gray-600);font-size:.88rem">Selon les conditions de l'Assurance Maladie.</span></div></div>
+    </div>
+    <a class="btn btn-black btn-lg" href="tel:+33698352990">📞 Réserver mon transport médical</a>
+  </div>
+</div></section></div>
+
+<!-- ═══════ PAGE VÉHICULES ═══════ -->
+<div class="page" id="p-vehicules">
+<section style="padding:120px 0 80px"><div class="container sec-center">
+  <div class="sec-badge">Notre flotte</div><h2 class="sec-title">Des véhicules d'exception</h2><p class="sec-sub">Chaque trajet mérite le meilleur.</p>
+  <div class="veh-grid" style="margin-top:48px">
+    <div class="veh-card"><div class="veh-img-wrap"><img src="assets/eco-electrique.jpg" alt="Tesla Model Y Eco Électrique" class="veh-img"/></div><div class="veh-body"><div class="veh-cat">Eco Électrique</div><div class="veh-name">Tesla Model Y</div><div class="veh-desc">Silence absolu, zéro émission. Climatisation automatique, chargeurs USB, intérieur cuir.</div><div class="veh-features"><span class="veh-feat">100% électrique</span><span class="veh-feat">4 passagers</span><span class="veh-feat">Chargeurs USB</span><span class="veh-feat">Cuir</span></div></div></div>
+    <div class="veh-card"><div class="veh-img-wrap"><img src="assets/business-van.jpg" alt="Mercedes Classe V Business Van" class="veh-img"/></div><div class="veh-body"><div class="veh-cat">Business Van</div><div class="veh-name">Mercedes Classe V</div><div class="veh-desc">Espace généreux, finitions haut de gamme. Idéal groupes et événements.</div><div class="veh-features"><span class="veh-feat">7 places</span><span class="veh-feat">Grand coffre</span><span class="veh-feat">Climatisation zone</span><span class="veh-feat">Cuir</span></div></div></div>
+  </div>
+</div></section></div>
+
+<!-- ═══════ PAGE CONTACT ═══════ -->
+<div class="page" id="p-contact">
+<section class="reservation" style="padding-top:120px"><div class="container"><div class="res-wrap">
+  <div>
+    <div class="gold-line"></div><div class="sec-badge">Contact</div>
+    <h2 class="sec-title">Réservez votre taxi</h2>
+    <p class="sec-sub">Contactez-nous par téléphone, WhatsApp ou formulaire.</p>
+    <div class="res-contacts">
+      <a class="res-contact" href="tel:+33698352990"><div class="res-contact-ico">📞</div><div><div class="res-contact-lbl">Téléphone</div><div class="res-contact-val">06 98 35 29 90</div></div></a>
+      <a class="res-contact" href="https://wa.me/33698352990"><div class="res-contact-ico">💬</div><div><div class="res-contact-lbl">WhatsApp</div><div class="res-contact-val">Envoyer un message</div></div></a>
+      <a class="res-contact" href="mailto:adequat.taxi@outlook.fr"><div class="res-contact-ico">✉️</div><div><div class="res-contact-lbl">Email</div><div class="res-contact-val">adequat.taxi@outlook.fr</div></div></a>
+    </div>
+  </div>
+  <div class="form-card">
+    <div class="form-title">Demande de réservation</div>
+    <div class="fg-row"><div class="fg"><label>Nom</label><input id="fn" placeholder="Votre nom"/></div><div class="fg"><label>Téléphone</label><input id="fp" placeholder="06 …" type="tel"/></div></div>
+    <div class="fg"><label>Email</label><input placeholder="votre@email.fr" type="email"/></div>
+    <div class="fg-row"><div class="fg"><label>Date</label><input type="date"/></div><div class="fg"><label>Heure</label><input type="time"/></div></div>
+    <div class="fg"><label>Départ</label><input placeholder="Adresse de départ"/></div>
+    <div class="fg"><label>Destination</label><input placeholder="Adresse d'arrivée"/></div>
+    <div class="fg"><label>Message</label><textarea rows="3" placeholder="Informations complémentaires…"></textarea></div>
+    <button class="fsub" onclick="submitForm()">Envoyer ma demande</button>
+    <div class="form-note">Confirmation sous 15 minutes.</div>
+    <div class="form-success" id="toast"><p>✅ Demande envoyée !</p><small>Nous vous recontactons très rapidement.</small></div>
+  </div>
+</div></div></section></div>
+
+<!-- FOOTER -->
+<footer><div class="container">
+  <div class="footer-grid">
+    <div>
+      <img src="assets/adequat-logo.png" alt="Adéquat Taxi" class="footer-logo"/>
+      <p class="footer-desc">Taxi professionnel à Clermont-Ferrand et dans tout le Puy-de-Dôme. Conventionné CPAM. Disponible 24h/24.</p>
+      <div style="display:flex;gap:10px;margin-bottom:20px"><a class="btn btn-gold btn-sm" href="tel:+33698352990">📞 Appeler</a><a class="btn btn-green btn-sm" href="https://wa.me/33698352990">💬 WhatsApp</a></div>
+      <div class="footer-siret">SIRET : 877 918 243<br>Conventionné CPAM · Puy-de-Dôme<br>adequat.taxi@outlook.fr</div>
+    </div>
+    <div><div class="footer-heading">Services</div><ul class="footer-links"><li><a onclick="showPage('accueil')">Accueil</a></li><li><a onclick="showPage('accueil');setTimeout(function(){document.getElementById('simulateur').scrollIntoView({behavior:'smooth'})},100)">Simulateur</a></li><li><a onclick="showPage('medical')">Transport médical</a></li><li><a onclick="showPage('vehicules')">Nos véhicules</a></li><li><a onclick="showPage('contact')">Réservation</a></li></ul></div>
+    <div><div class="footer-heading">Zones desservies</div><ul class="footer-links"><li><a>Clermont-Ferrand</a></li><li><a>Aéroport Aulnat</a></li><li><a>Aydat · Murol · Besse</a></li><li><a>La Bourboule · Le Mont-Dore</a></li><li><a>CHU Montpied & Estaing</a></li><li><a>Tout le Puy-de-Dôme</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Adéquat Taxi — Tous droits réservés</span><span>Mentions légales · Politique de confidentialité</span></div>
+</div></footer>
+
+<script>
+/* === NAVIGATION === */
+function showPage(p){
+  document.querySelectorAll('.page').forEach(function(s){s.classList.remove('active')});
+  var el=document.getElementById('p-'+p);
+  if(el){el.classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+}
+window.addEventListener('scroll',function(){
+  var nav=document.getElementById('nav');
+  if(nav)nav.classList.toggle('sc',window.scrollY>20);
+});
+
+/* === IMAGE DATA for vehicle cards === */
+var TESLA_IMG='assets/eco-electrique.jpg';
+var MERC_IMG='assets/business-van.jpg';
+</script>
+<script>
+/* simulator-v2.js — ADÉQUAT TAXI — Blacklane-style vehicle selection */
+'use strict';
+var simType='c';
+var SEL={from:null,to:null};
+var AC_TIMERS={};
+var LAST_CALC=null; /* store last calculation data */
+
+var PLACES=[
+  {label:'Aéroport Clermont-Ferrand Auvergne (Aulnat)',sub:'Aulnat · 63510',lat:45.7869,lon:3.1586,ico:'✈️'},
+  {label:'Gare SNCF Clermont-Ferrand',sub:'Place Pierre Semard · 63000',lat:45.7594,lon:3.1059,ico:'🚂'},
+  {label:'CHU Gabriel Montpied',sub:'58 rue Montalembert · 63000',lat:45.7915,lon:3.0880,ico:'🏥'},
+  {label:'CHU Estaing',sub:'1 place Lucie Aubrac · 63000',lat:45.7576,lon:3.1217,ico:'🏥'},
+  {label:'Clinique de la Chataigneraie',sub:'Beaumont · 63110',lat:45.7419,lon:3.1017,ico:'🏥'},
+  {label:'Polyclinique du Parc',sub:'Clermont-Ferrand · 63000',lat:45.7814,lon:3.0731,ico:'🏥'},
+  {label:'Vulcania',sub:'Saint-Ours-les-Roches · 63230',lat:45.7503,lon:2.9572,ico:'🌋'},
+  {label:'Puy de Dôme',sub:'Sommet · 63870',lat:45.7722,lon:2.9639,ico:'🌋'},
+  {label:'Le Mont-Dore',sub:'63240',lat:45.5736,lon:2.8150,ico:'🏔️'},
+  {label:'La Bourboule',sub:'63150',lat:45.5894,lon:2.7408,ico:'💧'},
+  {label:'Super-Besse',sub:'63610',lat:45.4833,lon:2.9619,ico:'⛷️'},
+  {label:'Issoire',sub:'63500',lat:45.5436,lon:3.2495,ico:'📍'},
+  {label:'Riom',sub:'63200',lat:45.8935,lon:3.1130,ico:'📍'},
+  {label:'Thiers',sub:'63300',lat:45.8575,lon:3.5478,ico:'📍'},
+  {label:'Vichy',sub:'03200',lat:46.1278,lon:3.4265,ico:'📍'},
+  {label:'Clermont-Ferrand Centre',sub:'63000',lat:45.7772,lon:3.0870,ico:'🏙️'},
+  {label:'Aydat',sub:'63970',lat:45.6603,lon:2.9761,ico:'🏔️'},
+  {label:'Chambon-sur-Lac',sub:'63790',lat:45.5742,lon:2.9272,ico:'🏔️'},
+  {label:'Murol',sub:'63790',lat:45.5747,lon:2.9453,ico:'🏔️'},
+  {label:'Saint-Nectaire',sub:'63710',lat:45.5836,lon:2.9928,ico:'🏔️'},
+  {label:'Besse-et-Saint-Anastaise',sub:'63610',lat:45.5147,lon:2.9364,ico:'🏔️'},
+  {label:'Rochefort-Montagne',sub:'63210',lat:45.6864,lon:2.8089,ico:'📍'},
+  {label:'Saint-Saturnin',sub:'63450',lat:45.6639,lon:3.0903,ico:'📍'},
+  {label:'Nébouzat',sub:'63210',lat:45.7283,lon:2.8983,ico:'📍'},
+  {label:'Olby',sub:'63210',lat:45.7250,lon:2.8536,ico:'📍'},
+  {label:'Laqueuille',sub:'63820',lat:45.6464,lon:2.7375,ico:'📍'},
+  {label:'Perpezat',sub:'63210',lat:45.7014,lon:2.8200,ico:'📍'},
+  {label:'Theix',sub:'63122',lat:45.6397,lon:3.0250,ico:'📍'},
+  {label:'Pessade',sub:'63850',lat:45.5833,lon:2.9000,ico:'📍'},
+  {label:'Randol',sub:'63450',lat:45.6417,lon:3.0750,ico:'📍'},
+  {label:'Olloix',sub:'63450',lat:45.6347,lon:3.0553,ico:'📍'},
+  {label:'Cournols',sub:'63450',lat:45.6200,lon:3.0850,ico:'📍'},
+  {label:'Aurières',sub:'63210',lat:45.6939,lon:2.8750,ico:'📍'},
+  {label:'Saulzet-le-Froid',sub:'63970',lat:45.6631,lon:2.9300,ico:'📍'},
+  {label:'Le Vernet-Sainte-Marguerite',sub:'63710',lat:45.6053,lon:3.0306,ico:'📍'},
+  {label:'Aéroport Lyon Saint-Exupéry',sub:'Colombier-Saugnieu · 69125',lat:45.7194,lon:5.0781,ico:'✈️'},
+  {label:'Gare de Lyon Part-Dieu',sub:'Lyon · 69003',lat:45.7606,lon:4.8594,ico:'🚂'}
+];
+
+function norm(s){return(s||'').toLowerCase().replace(/[éèêë]/g,'e').replace(/[àâ]/g,'a').replace(/[ùûü]/g,'u').replace(/[îï]/g,'i').replace(/[ôö]/g,'o').replace(/ç/g,'c').replace(/[-_']/g,' ').trim()}
+function searchLocal(q){var n=norm(q);if(n.length<2)return[];return PLACES.filter(function(p){return(norm(p.label)+' '+norm(p.sub)).indexOf(n)>=0}).slice(0,5)}
+
+function acSearch(input,dropId){
+  var q=(input.value||'').trim();var drop=document.getElementById(dropId);if(!drop)return;
+  var id=input.id||'';
+  if(id==='addr-from'||id==='addr-from2')SEL.from=null;
+  else if(id==='addr-to')SEL.to=null;
+  if(q.length<2){dropHide(drop);return}
+  clearTimeout(AC_TIMERS[dropId]);
+  var local=searchLocal(q);
+  drop.innerHTML='';
+  if(local.length){local.forEach(function(p){drop.appendChild(makeItem(p.label,p.sub,p.ico,p.lat,p.lon,input,id,drop))});drop.classList.add('open')}
+  else{drop.innerHTML='<div class="ac-loading">Recherche…</div>';drop.classList.add('open')}
+  AC_TIMERS[dropId]=setTimeout(function(){
+    fetch('https://api-adresse.data.gouv.fr/search/?q='+encodeURIComponent(q)+'&limit=6&autocomplete=1&lat=45.77&lon=3.08')
+    .then(function(r){if(!r.ok)throw new Error();return r.json()})
+    .then(function(data){
+      var features=(data&&data.features)||[];drop.innerHTML='';
+      local.forEach(function(p){drop.appendChild(makeItem(p.label,p.sub,p.ico,p.lat,p.lon,input,id,drop))});
+      features.forEach(function(f){
+        var p=f.properties||{},co=(f.geometry&&f.geometry.coordinates)||[0,0],lbl=p.label||'';
+        if(local.some(function(l){return norm(l.label).indexOf(norm(lbl.split(',')[0]))>=0}))return;
+        var icon='📍';if(/aulnat|a.roport/i.test(lbl))icon='✈️';else if(/gare|sncf/i.test(lbl))icon='🚂';else if(/chu|h.pital|clinique/i.test(lbl))icon='🏥';else if(p.type==='housenumber')icon='🏠';
+        drop.appendChild(makeItem(lbl,p.context||'',icon,co[1],co[0],input,id,drop))
+      });
+      if(!drop.children.length)drop.innerHTML='<div class="ac-err">Aucun résultat</div>';
+      drop.classList.add('open')
+    }).catch(function(){if(!local.length){drop.innerHTML='<div class="ac-err">Erreur réseau</div>';drop.classList.add('open')}})
+  },250)
+}
+function makeItem(label,sub,icon,lat,lon,input,id,drop){
+  var el=document.createElement('div');el.className='ac-item';
+  el.innerHTML='<span class="aci-ico">'+icon+'</span><span><span class="aci-label">'+label+'</span><span class="aci-sub">'+sub+'</span></span>';
+  el.onclick=function(){var s={lat:lat,lon:lon,label:label};input.value=label;dropHide(drop);
+    if(id==='addr-from'||id==='addr-from2')SEL.from=s;else if(id==='addr-to')SEL.to=s};
+  return el
+}
+function dropHide(drop){if(drop){drop.classList.remove('open');drop.innerHTML=''}}
+document.addEventListener('click',function(e){var t=e.target;while(t){if(t.classList&&t.classList.contains('ac-wrap'))return;t=t.parentElement}document.querySelectorAll('.ac-drop').forEach(dropHide)});
+
+function useMyLocation(inputId,btn){
+  var inp=document.getElementById(inputId);if(!inp||!navigator.geolocation){alert('Géolocalisation non disponible.');return}
+  if(btn){btn.classList.add('loading');btn.textContent='⏳'}
+  navigator.geolocation.getCurrentPosition(function(pos){
+    var lat=pos.coords.latitude,lon=pos.coords.longitude;
+    if(btn){btn.classList.remove('loading');btn.textContent='📍'}
+    fetch('https://api-adresse.data.gouv.fr/reverse/?lat='+lat+'&lon='+lon).then(function(r){return r.json()}).then(function(data){
+      var label=(data.features&&data.features.length)?data.features[0].properties.label:lat.toFixed(5)+', '+lon.toFixed(5);
+      inp.value=label;SEL.from={lat:lat,lon:lon,label:label};
+      inp.style.borderColor='#22c55e';setTimeout(function(){inp.style.borderColor=''},1500)
+    }).catch(function(){inp.value='Position GPS';SEL.from={lat:lat,lon:lon,label:'Ma position'}})
+  },function(err){
+    if(btn){btn.classList.remove('loading');btn.textContent='📍'}
+    var msgs={1:'Accès refusé. Activez la localisation.',2:'Position introuvable.',3:'Délai dépassé.'};
+    alert(msgs[err.code]||'Erreur GPS.')
+  },{timeout:10000,maximumAge:60000,enableHighAccuracy:true})
+}
+
+function hav(lat1,lon1,lat2,lon2){
+  var R=6371,r=Math.PI/180,dL=(lat2-lat1)*r,dO=(lon2-lon1)*r;
+  var a=Math.sin(dL/2)*Math.sin(dL/2)+Math.cos(lat1*r)*Math.cos(lat2*r)*Math.sin(dO/2)*Math.sin(dO/2);
+  return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))
+}
+
+function geocode(addr){
+  var q=(addr||'').trim();if(!q)return Promise.resolve(null);
+  var local=searchLocal(q);if(local.length)return Promise.resolve(local[0]);
+  return fetch('https://api-adresse.data.gouv.fr/search/?q='+encodeURIComponent(q)+'&limit=5&autocomplete=1')
+    .then(function(r){if(!r.ok)throw new Error();return r.json()})
+    .then(function(data){var f=(data&&data.features)||[];if(!f.length)return null;var co=f[0].geometry.coordinates;return{lat:co[1],lon:co[0],label:(f[0].properties&&f[0].properties.label)||q}})
+    .catch(function(){return null})
+}
+function resolveAddress(inputId,selValue){
+  var el=document.getElementById(inputId),typed=((el&&el.value)||'').trim();
+  if(!typed)return Promise.resolve(null);
+  if(selValue&&selValue.label&&typed.toLowerCase()===selValue.label.toLowerCase())return Promise.resolve(selValue);
+  return geocode(typed).then(function(r){if(!r)return null;if(inputId==='addr-from'||inputId==='addr-from2')SEL.from=r;else if(inputId==='addr-to')SEL.to=r;return r})
+}
+
+function setSim(t,btn){
+  simType=t;
+  document.querySelectorAll('.stab').forEach(function(b){b.classList.remove('a')});
+  if(btn)btn.classList.add('a');
+  ['sc','sa','sd','sm'].forEach(function(id){var el=document.getElementById(id);if(el)el.style.display='none'});
+  var panel=document.getElementById({c:'sc',a:'sa',d:'sd',m:'sm'}[t]);
+  if(panel)panel.style.display='block';
+  hideAllResults();
+  SEL={from:null,to:null};
+}
+
+function hideAllResults(){
+  document.getElementById('sres').classList.remove('show');
+  document.getElementById('sres-medical').classList.remove('show');
+  document.getElementById('sres-dispo').classList.remove('show');
+  document.getElementById('sres-confirm').classList.remove('show');
+}
+
+/* ═══════════════════════════════════════
+   BLACKLANE-STYLE: calcPrice now computes
+   prices for BOTH vehicles and shows cards
+   ═══════════════════════════════════════ */
+function calcPrice(){
+  hideAllResults();
+
+  /* Medical */
+  if(simType==='m'){
+    document.getElementById('sres-medical').classList.add('show');
+    return;
+  }
+
+  /* Mise à disposition */
+  if(simType==='d'){
+    var hrs=parseInt((document.getElementById('dh')||{}).value||1,10);
+    var dp=document.getElementById('sres-dispo');
+    document.getElementById('dispo-price').textContent=hrs*75+' €';
+    document.getElementById('dispo-label').textContent='Mise à disposition Mercedes Classe V · '+hrs+'h';
+    document.getElementById('dispo-tags').innerHTML='<span style="background:var(--gray-100);border:1px solid var(--gray-200);padding:5px 12px;border-radius:50px;font-size:.76rem;color:var(--gray-700)">Mercedes Classe V · 7 places</span><span style="background:var(--gray-100);border:1px solid var(--gray-200);padding:5px 12px;border-radius:50px;font-size:.76rem;color:var(--gray-700)">Petits trajets inclus</span>';
+    dp.classList.add('show');
+    return;
+  }
+
+  var isNight=((document.getElementById(simType==='a'?'stime2':'stime')||{}).value==='night');
+  var rate=isNight?3.30:2.20;
+
+  /* Airport */
+  if(simType==='a'){
+    var airVal=(document.getElementById('aair')||{}).value||'45.7869,3.1586';
+    var ap=airVal.split(','),aLat=parseFloat(ap[0]),aLon=parseFloat(ap[1]);
+    var bags=parseFloat((document.getElementById('abags')||{}).value||0);
+    var doAirCalc=function(from){
+      var dist=hav(from.lat,from.lon,aLat,aLon)*1.25;
+      var dur=Math.round(dist*1.4);
+      var pTesla = Math.max(Math.round(dist * rate * 1 + (bags || 0) + 3), 8);
+      var pMerc = Math.max(Math.round(dist * rate * 1.3 + (bags || 0) + 3), 12);
+      if (dist < 15) {
+  pTesla += 3;
+  pMerc = 50;
+} else {
+      }
+      showVehicleCards(from.label,'Aéroport',dist,dur,pTesla,pMerc,isNight);
+    };
+    if(SEL.from){doAirCalc(SEL.from);return}
+    var fromTxt=((document.getElementById('addr-from2')||{}).value||'').trim();
+    if(!fromTxt){doAirCalc({lat:45.7772,lon:3.0870,label:'Clermont-Ferrand'});return}
+    setBtn(true);
+    geocode(fromTxt).then(function(res){setBtn(false);doAirCalc(res||{lat:45.7772,lon:3.0870,label:'Clermont-Ferrand'})})
+    .catch(function(){setBtn(false);doAirCalc({lat:45.7772,lon:3.0870,label:'Clermont-Ferrand'})});
+    return;
+  }
+
+  /* Course classique */
+  var fromTxt2=((document.getElementById('addr-from')||{}).value||'').trim();
+  var toTxt=((document.getElementById('addr-to')||{}).value||'').trim();
+  if(!fromTxt2||!toTxt){if(!fromTxt2)highlight('addr-from');if(!toTxt)highlight('addr-to');return}
+
+  setBtn(true);
+  Promise.all([resolveAddress('addr-from',SEL.from),resolveAddress('addr-to',SEL.to)])
+  .then(function(results){
+    setBtn(false);
+    var from=results[0],to=results[1];
+    if(!from||!to){if(!from)highlight('addr-from');if(!to)highlight('addr-to');return}
+    var dist=hav(from.lat,from.lon,to.lat,to.lon)*1.28;
+    var dur=Math.round(dist*1.35);
+    var pTesla = Math.max(Math.round(dist * rate * 1 + 3), 8);
+    var pMerc = Math.max(Math.round(dist * rate * 1.3 + 3), 12);
+    if (dist < 15) {
+  pTesla += 3;
+  pMerc = 50;
+} else {
+    }
+    showVehicleCards(from.label,to.label,dist,dur,pTesla,pMerc,isNight);
+  })
+  .catch(function(){setBtn(false)});
+}
+
+/* ═══════════════════════════════════════
+   Show the two vehicle cards (Blacklane style)
+   ═══════════════════════════════════════ */
+var CURRENT_QUOTE=null;
+
+function showVehicleCards(fromLabel,toLabel,dist,dur,priceTesla,priceMerc,isNight){
+  var routeEl=document.getElementById('sres-route');
+  routeEl.innerHTML='<strong>'+fromLabel+'</strong><span class="arrow">→</span><strong>'+toLabel+'</strong><span class="dist-badge">~'+Math.round(dist)+' km · '+dur+' min</span>';
+
+  var timeLabel=isNight?'Nuit / Dim. / Férié':'Journée';
+  CURRENT_QUOTE={fromLabel:fromLabel,toLabel:toLabel,dist:Math.round(dist),dur:dur,timeLabel:timeLabel};
+
+  var cardsHTML=''
+  +'<div class="veh-option" onclick="selectVeh(this,'+priceTesla+',\'Tesla Model Y\',\'Eco Électrique · '+timeLabel+'\')">'
+  +'  <div class="veh-opt-img"><img src="'+TESLA_IMG+'" alt="Tesla Model Y"/></div>'
+  +'  <div class="veh-opt-body">'
+  +'    <div class="veh-opt-cat">Eco Électrique</div>'
+  +'    <div class="veh-opt-name">Tesla Model Y</div>'
+  +'    <div class="veh-opt-meta"><span class="veh-opt-tag">👤 4 places</span><span class="veh-opt-tag">🧳 3 bagages</span><span class="veh-opt-tag">⚡ Électrique</span></div>'
+  +'    <div class="veh-opt-price-row"><div><div class="veh-opt-price">'+priceTesla+' €</div><div class="veh-opt-price-label">Estimation</div></div><div class="veh-opt-dur">~'+dur+' min<span>'+timeLabel+'</span></div></div>'
+  +'  </div>'
+  +'</div>'
+  +'<div class="veh-option" onclick="selectVeh(this,'+priceMerc+',\'Mercedes Classe V\',\'Business Van · '+timeLabel+'\')">'
+  +'  <div class="veh-opt-img"><img src="'+MERC_IMG+'" alt="Mercedes V-Class"/></div>'
+  +'  <div class="veh-opt-body">'
+  +'    <div class="veh-opt-cat">Business Van</div>'
+  +'    <div class="veh-opt-name">Mercedes Classe V</div>'
+  +'    <div class="veh-opt-meta"><span class="veh-opt-tag">👤 7 places</span><span class="veh-opt-tag">🧳 8 bagages</span><span class="veh-opt-tag">🛡️ Premium</span></div>'
+  +'    <div class="veh-opt-price-row"><div><div class="veh-opt-price">'+priceMerc+' €</div><div class="veh-opt-price-label">Estimation</div></div><div class="veh-opt-dur">~'+dur+' min<span>'+timeLabel+'</span></div></div>'
+  +'  </div>'
+  +'</div>';
+
+  document.getElementById('veh-options').innerHTML=cardsHTML;
+  document.getElementById('sres-confirm').classList.remove('show');
+  document.getElementById('sres').classList.add('show');
+}
+
+/* ═══════════════════════════════════════
+   Select a vehicle card
+   ═══════════════════════════════════════ */
+function selectVeh(el,price,name,label){
+  document.querySelectorAll('.veh-option').forEach(function(c){c.classList.remove('selected')});
+  el.classList.add('selected');
+  document.getElementById('confirm-price').textContent=price+' €';
+  document.getElementById('confirm-veh').textContent=name;
+  document.getElementById('confirm-label').textContent=label+' · Estimation approximative';
+
+  var wa=document.getElementById('confirm-wa');
+  if(wa){
+    var msg=[
+      'Bonjour Adéquat Taxi, je souhaite réserver.',
+      'Départ : '+(CURRENT_QUOTE?CURRENT_QUOTE.fromLabel:''),
+      'Arrivée : '+(CURRENT_QUOTE?CURRENT_QUOTE.toLabel:''),
+      'Distance estimée : '+(CURRENT_QUOTE?CURRENT_QUOTE.dist:'')+' km',
+      'Durée estimée : '+(CURRENT_QUOTE?CURRENT_QUOTE.dur:'')+' min',
+      'Véhicule : '+name,
+      'Tarif estimé : '+price+' €'
+    ].join('\n');
+    wa.href='https://wa.me/33698352990?text='+encodeURIComponent(msg);
+  }
+
+  var call=document.getElementById('confirm-call');
+  if(call){
+    call.href='tel:+33698352990';
+  }
+
+  document.getElementById('sres-confirm').classList.add('show');
+  setTimeout(function(){document.getElementById('sres-confirm').scrollIntoView({behavior:'smooth',block:'nearest'})},100);
+}
+
+function setBtn(loading){
+  var btn=document.getElementById('calcBtn');if(!btn)return;
+  btn.disabled=loading;btn.textContent=loading?'Recherche en cours…':'Voir les options';
+}
+function highlight(id){var el=document.getElementById(id);if(!el)return;el.style.borderColor='#f87171';setTimeout(function(){el.style.borderColor=''},2000)}
+function submitForm(){
+  var name=(document.getElementById('fn')||{}).value;
+  var phone=(document.getElementById('fp')||{}).value;
+  if(!name||!phone){alert('Merci de renseigner votre nom et téléphone.');return}
+  var t=document.getElementById('toast');
+  if(t){t.classList.add('show');setTimeout(function(){t.classList.remove('show')},5000)}
+}
+
+function reserveLongDistanceWhatsApp(){
+  try {
+    var select = document.getElementById('long-destination');
+    if(!select || !select.value){
+      alert("Choisissez une destination");
+      return;
+    }
+    var parts = select.value.split("|");
+    var destination = parts[0] || "";
+    var prix = parts[1] || "";
+    var message =
+      "Bonjour Adéquat Taxi,%0A" +
+      "Je valide une course longue distance.%0A" +
+      "Départ : Clermont-Ferrand%0A" +
+      "Destination : " + destination + "%0A" +
+      "Prix : " + prix + " €%0A" +
+      "Merci de me confirmer.";
+    var url = "https://wa.me/33698352990?text=" + message;
+    window.location.href = url; // iOS-friendly
+  } catch(e) {
+    console.error(e);
+    alert("Une erreur est survenue, réessayez.");
+  }
+}
+
+</script>
+</body>
+</html>
