@@ -4,9 +4,105 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Adéquat Taxi – Taxi Clermont-Ferrand & Puy-de-Dôme | 24h/24</title>
-<meta name="description" content="Adéquat Taxi : taxi professionnel à Clermont-Ferrand, transport médical CPAM, transferts aéroport & gare. Disponible 24h/24."/>
+<meta name="description" content="Adéquat Taxi : taxi professionnel à Clermont-Ferrand, transport médical CPAM, transferts aéroport & gare, longue distance. Disponible 24h/24."/>
+<meta name="keywords" content="Adéquat Taxi, taxi Clermont-Ferrand, taxi conventionné CPAM, transport médical Puy-de-Dôme, taxi aéroport Aulnat, VSL, dialyse, La Bourboule, Mont-Dore, Vichy, longue distance"/>
+<meta name="author" content="Adéquat Taxi"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://www.adequat-taxi.fr/"/>
+<meta name="theme-color" content="#0a0a0a"/>
+
+<!-- Geo tags pour SEO local -->
+<meta name="geo.region" content="FR-63"/>
+<meta name="geo.placename" content="Clermont-Ferrand"/>
+<meta name="geo.position" content="45.7772;3.0870"/>
+<meta name="ICBM" content="45.7772, 3.0870"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:title" content="Adéquat Taxi – Taxi Clermont-Ferrand & Puy-de-Dôme | 24h/24"/>
+<meta property="og:description" content="Taxi professionnel à Clermont-Ferrand. Transport médical conventionné CPAM, Tesla & Mercedes Classe V, disponible 24h/24."/>
+<meta property="og:url" content="https://www.adequat-taxi.fr/"/>
+<meta property="og:site_name" content="Adéquat Taxi"/>
+<meta property="og:image" content="https://www.adequat-taxi.fr/assets/eco-taxi-lumineux.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="1200"/>
+<meta property="og:image:alt" content="Tesla Model Y – Adéquat Taxi Clermont-Ferrand"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Adéquat Taxi – Taxi Clermont-Ferrand & Puy-de-Dôme"/>
+<meta name="twitter:description" content="Taxi professionnel à Clermont-Ferrand. Conventionné CPAM, disponible 24h/24."/>
+<meta name="twitter:image" content="https://www.adequat-taxi.fr/assets/eco-taxi-lumineux.jpg"/>
+
+<!-- Favicon -->
+<link rel="icon" type="image/webp" href="assets/favicon.webp"/>
+<link rel="apple-touch-icon" href="assets/adequat-logo.png"/>
+
+<!-- Preload critical hero image -->
+<link rel="preload" as="image" href="assets/eco-taxi-lumineux.webp" fetchpriority="high"/>
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+
+<!-- JSON-LD Structured Data : TaxiService -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TaxiService",
+  "name": "Adéquat Taxi",
+  "description": "Taxi professionnel à Clermont-Ferrand et dans tout le Puy-de-Dôme. Transport médical conventionné CPAM, transferts aéroport et gare, longue distance. Tesla Model Y et Mercedes Classe V. Disponible 24h/24.",
+  "image": "https://www.adequat-taxi.fr/assets/eco-taxi-lumineux.jpg",
+  "logo": "https://www.adequat-taxi.fr/assets/adequat-logo.png",
+  "url": "https://www.adequat-taxi.fr/",
+  "telephone": "+33698352990",
+  "email": "adequat.taxi@outlook.fr",
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card, CPAM",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Clermont-Ferrand",
+    "postalCode": "63000",
+    "addressRegion": "Auvergne-Rhône-Alpes",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 45.7772,
+    "longitude": 3.0870
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Clermont-Ferrand" },
+    { "@type": "City", "name": "La Bourboule" },
+    { "@type": "City", "name": "Le Mont-Dore" },
+    { "@type": "City", "name": "Vichy" },
+    { "@type": "AdministrativeArea", "name": "Puy-de-Dôme" }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "serviceType": [
+    "Transport médical conventionné CPAM",
+    "Transferts aéroport",
+    "Transferts gare",
+    "Longue distance",
+    "Transport groupes",
+    "Dialyse",
+    "Cures thermales"
+  ],
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "SIRET",
+    "value": "877918243"
+  },
+  "sameAs": []
+}
+</script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -294,7 +390,7 @@ nav.sc{box-shadow:0 1px 12px rgba(0,0,0,.06)}
 /* FOOTER */
 footer{background:var(--black);color:var(--white);padding:60px 0 0}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
-.footer-logo{height:40px;margin-bottom:16px;filter:invert(1) brightness(2)}
+.footer-logo{height:64px;width:auto;margin-bottom:16px;display:block;object-fit:contain}
 .footer-desc{color:var(--gray-500);font-size:.88rem;line-height:1.7;margin-bottom:20px}
 .footer-siret{color:var(--gray-600);font-size:.74rem;line-height:1.7}
 .footer-heading{font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-400);margin-bottom:16px}
@@ -314,15 +410,29 @@ footer{background:var(--black);color:var(--white);padding:60px 0 0}
 .mobile-close{position:absolute;top:20px;right:24px;background:none;border:none;font-size:1.6rem;cursor:pointer}
 .gold-line{width:40px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:16px}
 .sec-center .gold-line{margin:0 auto 16px}
+
+/* Conversion max */
+.conversion-trust{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px auto 24px}
+.conversion-trust span{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:999px;background:var(--gold-light);border:1px solid var(--gold-border);font-size:.82rem;font-weight:700;color:var(--gray-800)}
+.conversion-trust span:before{content:"✓";color:var(--gold);font-weight:900}
+.price-estimate-title{font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:800;text-align:center;margin-bottom:18px;color:var(--black)}
+.price-estimate-title strong{color:var(--gold)}
+.long-booking-box{margin-top:24px;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:20px;padding:18px}
+.long-booking-box label{display:block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--gray-600);margin-bottom:10px}
+.long-booking-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+.long-booking-row select{width:100%;padding:14px 16px;border-radius:999px;border:1.5px solid var(--gray-300);background:var(--white);color:var(--black);font-family:'DM Sans',sans-serif;font-size:.92rem;outline:none}
+.long-booking-row select:focus{border-color:var(--black);box-shadow:0 0 0 3px rgba(0,0,0,.06)}
+.long-booking-help{margin-top:10px;font-size:.78rem;color:var(--gray-500);line-height:1.5}
+@media(max-width:640px){.long-booking-row{grid-template-columns:1fr}.long-booking-row .btn{width:100%}.hero-ctas .btn{width:100%}}
+
 </style>
-<link rel="icon" type="image/png" href="assets/favicon.png"/>
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-inner">
-    <a onclick="showPage('accueil')" style="cursor:pointer"><img src="assets/adequat-logo.png" alt="Adéquat Taxi" class="logo-img"/></a>
+    <a onclick="showPage('accueil')" style="cursor:pointer"><img src="assets/adequat-logo.webp" alt="Adéquat Taxi" class="logo-img" width="600" height="600" decoding="async"/></a>
     <div class="nav-links">
       <a class="nav-link" onclick="showPage('accueil')">Accueil</a>
       <a class="nav-link" onclick="showPage('accueil');setTimeout(function(){document.getElementById('simulateur').scrollIntoView({behavior:'smooth'})},100)">Réservation</a>
@@ -356,13 +466,11 @@ footer{background:var(--black);color:var(--white);padding:60px 0 0}
     <div class="hero-inner">
       <div>
         <div class="hero-badge"><span class="dot"></span> Disponible maintenant</div>
-        <h1 class="hero-title">Réservez votre taxi<br>à <span class="gold">Clermont-Ferrand</span></h1>
-        <p class="hero-sub">Estimation immédiate · Disponible 24h/24 · Transport conventionné CPAM</p>
+        <h1 class="hero-title">Calculez votre tarif taxi<br><span class="gold">immédiatement</span></h1>
+        <p class="hero-sub">Prix instantané • Sans engagement • Réponse rapide</p>
         <div class="hero-ctas">
-          <a class="btn btn-black btn-lg" onclick="document.getElementById('simulateur').scrollIntoView({behavior:'smooth'})">Réserver</a>
-          <a class="btn btn-outline btn-lg" onclick="document.getElementById('choix-longue-distance').scrollIntoView({behavior:'smooth',block:'start'})">Longue distance</a>
-          <a class="btn btn-outline btn-lg" href="tel:+33698352990">📞 Appeler</a>
-          <a class="btn btn-green btn-lg" href="https://wa.me/33698352990">💬 WhatsApp</a>
+          <a class="btn btn-black btn-lg" onclick="document.getElementById('simulateur').scrollIntoView({behavior:'smooth',block:'start'})">Calculer mon prix</a>
+          <a class="btn btn-outline btn-lg" onclick="document.getElementById('choix-longue-distance').scrollIntoView({behavior:'smooth',block:'start'})">Voir les tarifs longue distance</a>
         </div>
         <div class="hero-stats">
           <div class="hero-stat"><div class="num">24/7</div><div class="lbl">Disponibilité</div></div>
@@ -371,7 +479,7 @@ footer{background:var(--black);color:var(--white);padding:60px 0 0}
         </div>
       </div>
       <div class="hero-img-wrap">
-        <img src="assets/eco-taxi-lumineux.jpg" alt="Adéquat Taxi Eco Électrique" class="hero-img"/>
+        <img src="assets/eco-taxi-lumineux.webp" alt="Tesla Model Y avec lumière TAXI – Adéquat Taxi Clermont-Ferrand" class="hero-img" width="1200" height="1200" fetchpriority="high" decoding="async"/>
       </div>
     </div>
   </div>
@@ -403,13 +511,13 @@ footer{background:var(--black);color:var(--white);padding:60px 0 0}
   <p class="sec-sub">Confort, élégance et performance pour chacun de vos déplacements.</p>
   <div class="veh-grid">
     <div class="veh-card">
-      <div class="veh-img-wrap"><img src="assets/eco-electrique.jpg" alt="Tesla Model Y Eco Électrique" class="veh-img"/></div>
+      <div class="veh-img-wrap"><img src="assets/eco-electrique.webp" alt="Tesla Model Y – Adéquat Taxi" class="veh-img" width="1200" height="1200" loading="lazy" decoding="async"/></div>
       <div class="veh-body"><div class="veh-cat">Eco Électrique</div><div class="veh-name">Tesla Model Y</div><div class="veh-desc">Silence absolu, zéro émission. Le choix premium et responsable pour vos trajets quotidiens.</div>
         <div class="veh-features"><span class="veh-feat">100% électrique</span><span class="veh-feat">Climatisation</span><span class="veh-feat">4 passagers</span><span class="veh-feat">Chargeurs USB</span></div>
       </div>
     </div>
     <div class="veh-card">
-      <div class="veh-img-wrap"><img src="assets/business-van.jpg" alt="Mercedes Classe V Business Van" class="veh-img"/></div>
+      <div class="veh-img-wrap"><img src="assets/business-van.webp" alt="Mercedes Classe V – Adéquat Taxi" class="veh-img" width="1200" height="1200" loading="lazy" decoding="async"/></div>
       <div class="veh-body"><div class="veh-cat">Business Van</div><div class="veh-name">Mercedes Classe V</div><div class="veh-desc">Espace généreux, finitions haut de gamme. L'excellence pour les groupes et les événements.</div>
         <div class="veh-features"><span class="veh-feat">7 places</span><span class="veh-feat">Grand coffre</span><span class="veh-feat">Climatisation</span><span class="veh-feat">Confort VIP</span></div>
       </div>
@@ -441,6 +549,12 @@ footer{background:var(--black);color:var(--white);padding:60px 0 0}
     <div class="sec-badge">Estimation tarifaire</div>
     <h2 class="sec-title">Où allez-vous ?</h2>
     <p class="sec-sub">Entrez vos adresses, nous vous proposons le véhicule idéal.</p>
+    <div class="conversion-trust">
+      <span>Prix annoncé = prix payé</span>
+      <span>Réponse rapide WhatsApp</span>
+      <span>Disponible 24h/24</span>
+    </div>
+
     <div class="sim-wrap">
       <div class="stabs">
         <button class="stab a" onclick="setSim('c',this)">🚗 Course</button>
@@ -574,7 +688,7 @@ footer{background:var(--black);color:var(--white);padding:60px 0 0}
         </div>
       </div>
 
-      <button class="sbtn" id="calcBtn" onclick="calcPrice()">Voir les options</button>
+      <button class="sbtn" id="calcBtn" onclick="calcPrice()">Voir le prix</button>
 
       <!-- VEHICLE SELECTION RESULTS (Blacklane style) -->
       <div class="sres" id="sres">
@@ -640,7 +754,7 @@ footer{background:var(--black);color:var(--white);padding:60px 0 0}
 <section class="long-distance" id="longue-distance"><div class="container">
   <div class="long-top">
     <div class="sec-badge">Longue distance</div>
-    <h2 class="sec-title">Taxi longue distance Clermont-Ferrand & toute la France</h2>
+    <h2 class="sec-title">Prix fixes longue distance dès 50€</h2>
     <p class="sec-sub">Adéquat Taxi vous accompagne au départ de Clermont-Ferrand pour vos transferts longue distance, trajets nationaux, aéroports et déplacements privés ou professionnels avec prix annoncés à l’avance.</p>
   </div>
 
@@ -683,7 +797,8 @@ footer{background:var(--black);color:var(--white);padding:60px 0 0}
 
       <div class="long-note">Mots-clés intégrés pour le référencement local : taxi longue distance Clermont-Ferrand, taxi toutes distances, transfert longue distance, chauffeur privé Clermont-Ferrand, taxi aéroport Clermont-Ferrand.</div>
 
-      <div id="choix-longue-distance"></div><div class="long-booking-box">
+      <div id="choix-longue-distance"></div>
+      <div class="long-booking-box">
         <label for="long-destination">Choisissez votre destination longue distance</label>
         <div class="long-booking-row">
           <select id="long-destination">
@@ -713,7 +828,7 @@ footer{background:var(--black);color:var(--white);padding:60px 0 0}
           </select>
           <button class="btn btn-green" type="button" onclick="reserveLongDistanceWhatsApp()">💬 Valider sur WhatsApp</button>
         </div>
-        <div class="long-booking-help">Après sélection, WhatsApp s’ouvre avec la destination et le tarif automatiquement remplis.</div>
+        <div class="long-booking-help">WhatsApp s’ouvre avec la destination et le prix automatiquement remplis.</div>
       </div>
     </div>
 
@@ -782,8 +897,8 @@ footer{background:var(--black);color:var(--white);padding:60px 0 0}
 <section style="padding:120px 0 80px"><div class="container sec-center">
   <div class="sec-badge">Notre flotte</div><h2 class="sec-title">Des véhicules d'exception</h2><p class="sec-sub">Chaque trajet mérite le meilleur.</p>
   <div class="veh-grid" style="margin-top:48px">
-    <div class="veh-card"><div class="veh-img-wrap"><img src="assets/eco-electrique.jpg" alt="Tesla Model Y Eco Électrique" class="veh-img"/></div><div class="veh-body"><div class="veh-cat">Eco Électrique</div><div class="veh-name">Tesla Model Y</div><div class="veh-desc">Silence absolu, zéro émission. Climatisation automatique, chargeurs USB, intérieur cuir.</div><div class="veh-features"><span class="veh-feat">100% électrique</span><span class="veh-feat">4 passagers</span><span class="veh-feat">Chargeurs USB</span><span class="veh-feat">Cuir</span></div></div></div>
-    <div class="veh-card"><div class="veh-img-wrap"><img src="assets/business-van.jpg" alt="Mercedes Classe V Business Van" class="veh-img"/></div><div class="veh-body"><div class="veh-cat">Business Van</div><div class="veh-name">Mercedes Classe V</div><div class="veh-desc">Espace généreux, finitions haut de gamme. Idéal groupes et événements.</div><div class="veh-features"><span class="veh-feat">7 places</span><span class="veh-feat">Grand coffre</span><span class="veh-feat">Climatisation zone</span><span class="veh-feat">Cuir</span></div></div></div>
+    <div class="veh-card"><div class="veh-img-wrap"><img src="assets/eco-electrique.webp" alt="Tesla Model Y" class="veh-img" width="1200" height="1200" loading="lazy" decoding="async"/></div><div class="veh-body"><div class="veh-cat">Eco Électrique</div><div class="veh-name">Tesla Model Y</div><div class="veh-desc">Silence absolu, zéro émission. Climatisation automatique, chargeurs USB, intérieur cuir.</div><div class="veh-features"><span class="veh-feat">100% électrique</span><span class="veh-feat">4 passagers</span><span class="veh-feat">Chargeurs USB</span><span class="veh-feat">Cuir</span></div></div></div>
+    <div class="veh-card"><div class="veh-img-wrap"><img src="assets/business-van.webp" alt="Mercedes Classe V – Adéquat Taxi" class="veh-img" width="1200" height="1200" loading="lazy" decoding="async"/></div><div class="veh-body"><div class="veh-cat">Business Van</div><div class="veh-name">Mercedes Classe V</div><div class="veh-desc">Espace généreux, finitions haut de gamme. Idéal groupes et événements.</div><div class="veh-features"><span class="veh-feat">7 places</span><span class="veh-feat">Grand coffre</span><span class="veh-feat">Climatisation zone</span><span class="veh-feat">Cuir</span></div></div></div>
   </div>
 </div></section></div>
 
@@ -800,25 +915,27 @@ footer{background:var(--black);color:var(--white);padding:60px 0 0}
       <a class="res-contact" href="mailto:adequat.taxi@outlook.fr"><div class="res-contact-ico">✉️</div><div><div class="res-contact-lbl">Email</div><div class="res-contact-val">adequat.taxi@outlook.fr</div></div></a>
     </div>
   </div>
-  <div class="form-card">
+  <form class="form-card" name="reservation" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return submitForm(event)">
+    <input type="hidden" name="form-name" value="reservation"/>
+    <p style="display:none"><label>Ne pas remplir : <input name="bot-field"/></label></p>
     <div class="form-title">Demande de réservation</div>
-    <div class="fg-row"><div class="fg"><label>Nom</label><input id="fn" placeholder="Votre nom"/></div><div class="fg"><label>Téléphone</label><input id="fp" placeholder="06 …" type="tel"/></div></div>
-    <div class="fg"><label>Email</label><input placeholder="votre@email.fr" type="email"/></div>
-    <div class="fg-row"><div class="fg"><label>Date</label><input type="date"/></div><div class="fg"><label>Heure</label><input type="time"/></div></div>
-    <div class="fg"><label>Départ</label><input placeholder="Adresse de départ"/></div>
-    <div class="fg"><label>Destination</label><input placeholder="Adresse d'arrivée"/></div>
-    <div class="fg"><label>Message</label><textarea rows="3" placeholder="Informations complémentaires…"></textarea></div>
-    <button class="fsub" onclick="submitForm()">Envoyer ma demande</button>
+    <div class="fg-row"><div class="fg"><label for="fn">Nom</label><input id="fn" name="nom" placeholder="Votre nom" required/></div><div class="fg"><label for="fp">Téléphone</label><input id="fp" name="telephone" placeholder="06 …" type="tel" required/></div></div>
+    <div class="fg"><label for="fe">Email</label><input id="fe" name="email" placeholder="votre@email.fr" type="email"/></div>
+    <div class="fg-row"><div class="fg"><label for="fd">Date</label><input id="fd" name="date" type="date"/></div><div class="fg"><label for="fh">Heure</label><input id="fh" name="heure" type="time"/></div></div>
+    <div class="fg"><label for="fdep">Départ</label><input id="fdep" name="depart" placeholder="Adresse de départ"/></div>
+    <div class="fg"><label for="fdest">Destination</label><input id="fdest" name="destination" placeholder="Adresse d'arrivée"/></div>
+    <div class="fg"><label for="fm">Message</label><textarea id="fm" name="message" rows="3" placeholder="Informations complémentaires…"></textarea></div>
+    <button type="submit" class="fsub">Envoyer ma demande</button>
     <div class="form-note">Confirmation sous 15 minutes.</div>
     <div class="form-success" id="toast"><p>✅ Demande envoyée !</p><small>Nous vous recontactons très rapidement.</small></div>
-  </div>
+  </form>
 </div></div></section></div>
 
 <!-- FOOTER -->
 <footer><div class="container">
   <div class="footer-grid">
     <div>
-      <img src="assets/adequat-logo.png" alt="Adéquat Taxi" class="footer-logo"/>
+      <img src="assets/adequat-logo-white.webp" alt="Adéquat Taxi" class="footer-logo" width="600" height="600" loading="lazy" decoding="async"/>
       <p class="footer-desc">Taxi professionnel à Clermont-Ferrand et dans tout le Puy-de-Dôme. Conventionné CPAM. Disponible 24h/24.</p>
       <div style="display:flex;gap:10px;margin-bottom:20px"><a class="btn btn-gold btn-sm" href="tel:+33698352990">📞 Appeler</a><a class="btn btn-green btn-sm" href="https://wa.me/33698352990">💬 WhatsApp</a></div>
       <div class="footer-siret">SIRET : 877 918 243<br>Conventionné CPAM · Puy-de-Dôme<br>adequat.taxi@outlook.fr</div>
@@ -842,8 +959,8 @@ window.addEventListener('scroll',function(){
 });
 
 /* === IMAGE DATA for vehicle cards === */
-var TESLA_IMG='assets/eco-electrique.jpg';
-var MERC_IMG='assets/business-van.jpg';
+var TESLA_IMG='assets/eco-electrique.webp';
+var MERC_IMG='assets/business-van.webp';
 </script>
 <script>
 /* simulator-v2.js — ADÉQUAT TAXI — Blacklane-style vehicle selection */
@@ -935,22 +1052,40 @@ function dropHide(drop){if(drop){drop.classList.remove('open');drop.innerHTML=''
 document.addEventListener('click',function(e){var t=e.target;while(t){if(t.classList&&t.classList.contains('ac-wrap'))return;t=t.parentElement}document.querySelectorAll('.ac-drop').forEach(dropHide)});
 
 function useMyLocation(inputId,btn){
-  var inp=document.getElementById(inputId);if(!inp||!navigator.geolocation){alert('Géolocalisation non disponible.');return}
-  if(btn){btn.classList.add('loading');btn.textContent='⏳'}
+  var inp = document.getElementById(inputId);
+  if(!inp){ alert('Champ adresse introuvable.'); return; }
+  if(!('geolocation' in navigator)){ alert('Géolocalisation non disponible sur ce navigateur.'); return; }
+  if(btn){ btn.classList.add('loading'); btn.textContent='⏳'; }
+
   navigator.geolocation.getCurrentPosition(function(pos){
-    var lat=pos.coords.latitude,lon=pos.coords.longitude;
-    if(btn){btn.classList.remove('loading');btn.textContent='📍'}
-    fetch('https://api-adresse.data.gouv.fr/reverse/?lat='+lat+'&lon='+lon).then(function(r){return r.json()}).then(function(data){
-      var label=(data.features&&data.features.length)?data.features[0].properties.label:lat.toFixed(5)+', '+lon.toFixed(5);
-      inp.value=label;SEL.from={lat:lat,lon:lon,label:label};
-      inp.style.borderColor='#22c55e';setTimeout(function(){inp.style.borderColor=''},1500)
-    }).catch(function(){inp.value='Position GPS';SEL.from={lat:lat,lon:lon,label:'Ma position'}})
-  },function(err){
-    if(btn){btn.classList.remove('loading');btn.textContent='📍'}
-    var msgs={1:'Accès refusé. Activez la localisation.',2:'Position introuvable.',3:'Délai dépassé.'};
-    alert(msgs[err.code]||'Erreur GPS.')
-  },{timeout:10000,maximumAge:60000,enableHighAccuracy:true})
+    var lat = pos.coords.latitude;
+    var lon = pos.coords.longitude;
+
+    function finish(label){
+      inp.value = label || 'Ma position';
+      var point = {lat:lat, lon:lon, label:inp.value};
+      if(inputId === 'addr-from' || inputId === 'addr-from2'){ SEL.from = point; }
+      if(inputId === 'addr-to'){ SEL.to = point; }
+      inp.style.borderColor = '#22c55e';
+      setTimeout(function(){ inp.style.borderColor=''; }, 1500);
+      if(btn){ btn.classList.remove('loading'); btn.textContent='📍'; }
+    }
+
+    fetch('https://api-adresse.data.gouv.fr/reverse/?lat=' + encodeURIComponent(lat) + '&lon=' + encodeURIComponent(lon))
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        var label = (data.features && data.features[0] && data.features[0].properties && data.features[0].properties.label) ? data.features[0].properties.label : 'Ma position';
+        finish(label);
+      })
+      .catch(function(){ finish('Ma position'); });
+
+  }, function(err){
+    if(btn){ btn.classList.remove('loading'); btn.textContent='📍'; }
+    var msgs = {1:'Accès refusé. Sur iPhone : Réglages > Safari > Position > Autoriser.',2:'Position introuvable. Réessayez ou saisissez votre adresse.',3:'Délai dépassé. Réessayez ou saisissez votre adresse.'};
+    alert(msgs[err.code] || 'Erreur GPS. Saisissez votre adresse manuellement.');
+  }, {enableHighAccuracy:true, timeout:15000, maximumAge:0});
 }
+
 
 function hav(lat1,lon1,lat2,lon2){
   var R=6371,r=Math.PI/180,dL=(lat2-lat1)*r,dO=(lon2-lon1)*r;
@@ -1027,12 +1162,12 @@ function calcPrice(){
       var dist=hav(from.lat,from.lon,aLat,aLon)*1.25;
       var dur=Math.round(dist*1.4);
       var pTesla = Math.max(Math.round(dist * rate * 1 + (bags || 0) + 3), 8);
-      var pMerc = Math.max(Math.round(dist * rate * 1.3 + (bags || 0) + 3), 12);
+      var pMerc = pTesla;
       if (dist < 15) {
   pTesla += 3;
   pMerc = 50;
-} else {
-      }
+}
+      if (dist >= 15) { pMerc = pTesla; }
       showVehicleCards(from.label,'Aéroport',dist,dur,pTesla,pMerc,isNight);
     };
     if(SEL.from){doAirCalc(SEL.from);return}
@@ -1058,12 +1193,12 @@ function calcPrice(){
     var dist=hav(from.lat,from.lon,to.lat,to.lon)*1.28;
     var dur=Math.round(dist*1.35);
     var pTesla = Math.max(Math.round(dist * rate * 1 + 3), 8);
-    var pMerc = Math.max(Math.round(dist * rate * 1.3 + 3), 12);
+    var pMerc = pTesla;
     if (dist < 15) {
   pTesla += 3;
   pMerc = 50;
-} else {
-    }
+}
+    if (dist >= 15) { pMerc = pTesla; }
     showVehicleCards(from.label,to.label,dist,dur,pTesla,pMerc,isNight);
   })
   .catch(function(){setBtn(false)});
@@ -1083,7 +1218,7 @@ function showVehicleCards(fromLabel,toLabel,dist,dur,priceTesla,priceMerc,isNigh
 
   var cardsHTML=''
   +'<div class="veh-option" onclick="selectVeh(this,'+priceTesla+',\'Tesla Model Y\',\'Eco Électrique · '+timeLabel+'\')">'
-  +'  <div class="veh-opt-img"><img src="'+TESLA_IMG+'" alt="Tesla Model Y"/></div>'
+  +'  <div class="veh-opt-img"><img src="'+TESLA_IMG+'" alt="Tesla Model Y" width="800" height="800" loading="lazy" decoding="async"/></div>'
   +'  <div class="veh-opt-body">'
   +'    <div class="veh-opt-cat">Eco Électrique</div>'
   +'    <div class="veh-opt-name">Tesla Model Y</div>'
@@ -1092,7 +1227,7 @@ function showVehicleCards(fromLabel,toLabel,dist,dur,priceTesla,priceMerc,isNigh
   +'  </div>'
   +'</div>'
   +'<div class="veh-option" onclick="selectVeh(this,'+priceMerc+',\'Mercedes Classe V\',\'Business Van · '+timeLabel+'\')">'
-  +'  <div class="veh-opt-img"><img src="'+MERC_IMG+'" alt="Mercedes V-Class"/></div>'
+  +'  <div class="veh-opt-img"><img src="'+MERC_IMG+'" alt="Mercedes V-Class" width="800" height="800" loading="lazy" decoding="async"/></div>'
   +'  <div class="veh-opt-body">'
   +'    <div class="veh-opt-cat">Business Van</div>'
   +'    <div class="veh-opt-name">Mercedes Classe V</div>'
@@ -1141,41 +1276,143 @@ function selectVeh(el,price,name,label){
 
 function setBtn(loading){
   var btn=document.getElementById('calcBtn');if(!btn)return;
-  btn.disabled=loading;btn.textContent=loading?'Recherche en cours…':'Voir les options';
+  btn.disabled=loading;btn.textContent=loading?'Recherche en cours…':'Voir le prix';
 }
 function highlight(id){var el=document.getElementById(id);if(!el)return;el.style.borderColor='#f87171';setTimeout(function(){el.style.borderColor=''},2000)}
-function submitForm(){
+function submitForm(e){
+  if(e&&e.preventDefault)e.preventDefault();
+  var form=e&&e.target?e.target:document.querySelector('form[name="reservation"]');
+  if(!form)return false;
+
   var name=(document.getElementById('fn')||{}).value;
   var phone=(document.getElementById('fp')||{}).value;
-  if(!name||!phone){alert('Merci de renseigner votre nom et téléphone.');return}
-  var t=document.getElementById('toast');
-  if(t){t.classList.add('show');setTimeout(function(){t.classList.remove('show')},5000)}
+  if(!name||!phone){alert('Merci de renseigner votre nom et téléphone.');return false}
+
+  // Anti-spam honeypot (si rempli, c'est un bot)
+  var hp=form.querySelector('input[name="bot-field"]');
+  if(hp&&hp.value){return false}
+
+  // Build the form-encoded payload for Netlify Forms
+  var data=new FormData(form);
+  var encoded=[];
+  data.forEach(function(v,k){encoded.push(encodeURIComponent(k)+'='+encodeURIComponent(v))});
+
+  var btn=form.querySelector('button[type="submit"]');
+  if(btn){btn.disabled=true;btn.textContent='Envoi en cours…'}
+
+  fetch('/',{
+    method:'POST',
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:encoded.join('&')
+  }).then(function(r){
+    if(!r.ok)throw new Error('Network');
+    var t=document.getElementById('toast');
+    if(t){t.classList.add('show');setTimeout(function(){t.classList.remove('show')},6000)}
+    if(btn){btn.disabled=false;btn.textContent='Envoyer ma demande'}
+    form.reset();
+  }).catch(function(){
+    if(btn){btn.disabled=false;btn.textContent='Envoyer ma demande'}
+    var br=String.fromCharCode(10);
+    var msg='Bonjour Adéquat Taxi,'+br+br+'Demande de réservation :'+br;
+    var fields={'Nom':'fn','Tél':'fp','Email':'fe','Date':'fd','Heure':'fh','Départ':'fdep','Destination':'fdest','Message':'fm'};
+    Object.keys(fields).forEach(function(k){
+      var el=document.getElementById(fields[k]);
+      if(el&&el.value)msg+=k+' : '+el.value+br;
+    });
+    if(confirm("L'envoi a échoué. Voulez-vous envoyer votre demande directement par WhatsApp ?")){
+      window.location.href='https://wa.me/33698352990?text='+encodeURIComponent(msg);
+    }
+  });
+  return false;
 }
 
 function reserveLongDistanceWhatsApp(){
-  try {
-    var select = document.getElementById('long-destination');
-    if(!select || !select.value){
-      alert("Choisissez une destination");
-      return;
-    }
-    var parts = select.value.split("|");
-    var destination = parts[0] || "";
-    var prix = parts[1] || "";
-    var message =
-      "Bonjour Adéquat Taxi,%0A" +
-      "Je valide une course longue distance.%0A" +
-      "Départ : Clermont-Ferrand%0A" +
-      "Destination : " + destination + "%0A" +
-      "Prix : " + prix + " €%0A" +
-      "Merci de me confirmer.";
-    var url = "https://wa.me/33698352990?text=" + message;
-    window.location.href = url; // iOS-friendly
-  } catch(e) {
-    console.error(e);
-    alert("Une erreur est survenue, réessayez.");
+  var select = document.getElementById('long-destination');
+  if(!select || !select.value){
+    alert('Veuillez sélectionner une destination.');
+    return;
   }
+  var parts = select.value.split('|');
+  var destination = parts[0] || '';
+  var prix = parts[1] || '';
+  var br = String.fromCharCode(10);
+  var message =
+    'Bonjour Adéquat Taxi,' + br + br +
+    'Je souhaite réserver un trajet longue distance :' + br +
+    'Destination : ' + destination + br +
+    'Prix : ' + prix + ' €' + br + br +
+    'Merci de me confirmer la disponibilité.';
+  window.location.href = 'https://wa.me/33698352990?text=' + encodeURIComponent(message);
 }
+
+(function(){
+  window.ADEQUAT_LAST_QUOTE = window.ADEQUAT_LAST_QUOTE || null;
+
+  var oldShowVehicleCards = window.showVehicleCards;
+  if (typeof oldShowVehicleCards === "function") {
+    window.showVehicleCards = function(fromLabel,toLabel,dist,dur,priceTesla,priceMerc,isNight){
+      window.ADEQUAT_LAST_QUOTE = {
+        fromLabel: fromLabel,
+        toLabel: toLabel,
+        dist: dist,
+        dur: dur,
+        priceTesla: priceTesla,
+        priceMerc: priceMerc,
+        isNight: isNight
+      };
+      oldShowVehicleCards.apply(this, arguments);
+      setTimeout(function(){
+        var res = document.getElementById("sres");
+        if(res){
+          var title = res.querySelector(".price-estimate-title");
+          if(!title){
+            title = document.createElement("div");
+            title.className = "price-estimate-title";
+            var heading = res.querySelector(".sres-heading");
+            if(heading){ heading.parentNode.insertBefore(title, heading); }
+          }
+          title.innerHTML = "Votre prix estimé : <strong>à partir de " + priceTesla + " €</strong>";
+        }
+        var wa = document.getElementById("confirm-wa");
+        if(wa){
+          wa.textContent = "💬 Réserver sur WhatsApp";
+        }
+      }, 80);
+    };
+  }
+
+  function makeReservationMessage(vehicle, price){
+    var q = window.ADEQUAT_LAST_QUOTE || window.CURRENT_QUOTE || {};
+    return [
+      "Bonjour Adéquat Taxi,",
+      "",
+      "Je souhaite réserver un trajet :",
+      "📍 Départ : " + (q.fromLabel || ""),
+      "📍 Arrivée : " + (q.toLabel || ""),
+      "🚘 Véhicule : " + (vehicle || ""),
+      "💰 Prix estimé : " + (price || "") + " €",
+      "",
+      "Merci de me confirmer la disponibilité."
+    ].join("\n");
+  }
+
+  window.updateConfirmWhatsApp = function(vehicle, price){
+    var wa = document.getElementById("confirm-wa");
+    if(wa){
+      wa.href = "https://wa.me/33698352990?text=" + encodeURIComponent(makeReservationMessage(vehicle, price));
+      wa.target = "_blank";
+      wa.rel = "noopener";
+    }
+  };
+
+  var oldSelectVehicle = window.selectVehicle;
+  if (typeof oldSelectVehicle === "function") {
+    window.selectVehicle = function(name, price, label){
+      oldSelectVehicle.apply(this, arguments);
+      setTimeout(function(){ window.updateConfirmWhatsApp(name, price); }, 50);
+    };
+  }
+})();
 
 </script>
 </body>
